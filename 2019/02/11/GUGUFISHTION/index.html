@@ -26,7 +26,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle"><font color="#ff00ff">蒟蒻⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄报道</font><font color="#0099ff">　　　(置</font><font color="#00ff00">顶)</font><font color="#ff0000">(置</font><font color="#ff9900">顶)</font></h3>
+    <h3 class="subtitle">HDU 6390 GUGUFISHTION</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -43,16 +43,51 @@
     <div class="section">
         <div class="article">
     <div class="main">
-        <h1 class="title"><font color="#ff00ff">蒟蒻⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄报道</font><font color="#0099ff">　　　(置</font><font color="#00ff00">顶)</font><font color="#ff0000">(置</font><font color="#ff9900">顶)</font></h1>
+        <h1 class="title">HDU 6390 GUGUFISHTION</h1>
         <div class="stuff">
-            <span>十二月 31, 2099</span>
+            <span>二月 11, 2019</span>
             
-  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Others/">Others</a></li></ul>
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Study-Note/">Study Note</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <h3 id="这篇文章的出现，预示着时隔多年，我的博客终于要启用啦！"><a href="#这篇文章的出现，预示着时隔多年，我的博客终于要启用啦！" class="headerlink" title="这篇文章的出现，预示着时隔多年，我的博客终于要启用啦！"></a>这篇文章的出现，预示着时隔多年，我的博客终于要<del>启用</del>啦！</h3><h1 id="撒花花"><a href="#撒花花" class="headerlink" title="撒花花"></a><del>撒花花</del></h1>
+            <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="A-GUGUFISHTION"><a href="#A-GUGUFISHTION" class="headerlink" title="A.GUGUFISHTION"></a>A.GUGUFISHTION</h4><h6 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h6><p>给出$m,n,p$，求：$\sum_{a=1}^m\sum_{b=1}^n\frac {\phi(ab)}{\phi(a)\phi(b)}\ mod\ \ p$</p>
+<hr>
+<h6 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h6><p>第一行一个$T$代表组数。</p>
+<p>之后的$T$行，每行包含三个整数$m,n,p$。</p>
+<p>数据保证$p$是一个质数。</p>
+<hr>
+<h6 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h6><p>输出$T​$行，每行只有一个整数表示答案。</p>
+<hr>
+<h6 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h6><p>1</p>
+<p>5 7 23</p>
+<hr>
+<h6 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h6><p>2</p>
+<hr>
+<h6 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h6><p>$1\leq T \leq 3​$</p>
+<p>$1\leq m,n\leq1,000,000$</p>
+<p>$max(m,n)&lt; p \leq 10^9+7​$</p>
+<hr>
+<p>由欧拉函数的性质$\phi(p^k)=(p-1)×p^{k-1}(p为质数)$。</p>
+<p>令$d=gcd(a,b)=p_1^{k_1}×p_2^{k_2}×…×p_n^{k_n}​$。</p>
+<script type="math/tex; mode=display">G_u(a,b)=\frac {\phi(a,b)}{\phi(a)\phi(b)}=\frac{\phi(p_1^{2k_1}×p_2^{2k_2}×...×p_n^{2k_n})}{\phi(p_1^{k_1}×p_2^{k_2}×...×p_n^{k_n})^2}</script><p>由于欧拉函数为积性函数，且因为各项上下互质，展开约去。</p>
+<script type="math/tex; mode=display">G_u(a,b)=\frac {(p_1-1)×(p_2-1)×(p_3-1)×...×(p_n-1)×p_1^{2k_1-1}×p_2^{2k_2-1}×...×p_n^{2k_n-1}}{(p_1-$1)^2×(p_2-1)^2×(p_3-1)^2×...×(p_n-1)^2×p_1^{k_1-1}×p_2^{k_2-1}×...×p_n^{k_n-1}}</script><script type="math/tex; mode=display">=\frac {p_1×p_2×p_3×...×p_n}{(p_1-1)×(p_2-1)×...×(p_n-1)}=\frac {p_1×p_2×p_3×...×p_n×p_1^{k_1-1}×p_2^{k_2-1}×...×p_n^{k_n-1}}{(p_1-1)×(p_2-1)×(p_3-1)×...×(p_n-1)×p_1^{k_1-1}×p_2^{k_2-2}×...×p_n^{k_n-1}}</script><script type="math/tex; mode=display">=\frac {p_1^{k_1}×p_2^{k_2}×...×p_n^{k_n}}{\phi(p_1^{k_1}×p_2^{k_2}×...×p_n^{k_n})}=\frac {d}{\phi{d}}​</script><p>令$a[i]=\frac i{\phi(i)}​$，$f(m,n)=\sum_{a=1}^m\sum_{b=1}^nG_u(a,b)=\sum_{a=1}^m\sum_{b=1}^na×d​$</p>
+<script type="math/tex; mode=display">f(m,n)=\sum_{d=1}^{min(m,n)}\sum_{a=1}^m\sum_{b=1}^na[t]×[d==t]=\sum_{d=1}^{min(m,n)}\sum_{a=1}^{\lfloor \frac mt\rfloor}\sum_{b=1}^{\lfloor \frac nt\rfloor}a[t]×[d==1]​</script><p>$[到此处d的定义取消，懒得修改，写完发现不对了]$╮(╯▽╰)╭</p>
+<p>令$g(m,n)=\sum_{a=1}^m\sum_{b=1}^n[d==1]=\sum_{a=1}^m\sum_{b=1}^n\sum_{d|gcd(a,b)}\mu(d)=\sum_{d=1}^{min(a,b)}\mu(d)×\frac md×\frac nd$</p>
+<p>因为有：</p>
+<p>$\sum_{d|n}\mu(d)=1\ \ (n==1)$</p>
+<p>$\sum_{d|n}\mu(d)=0\ \ (n&gt;1)$</p>
+<p>当$gcd(a,b)==1$，则$\sum_{d|gcd(a,b)}\mu(d)=1$；</p>
+<p>当$gcd(a,b)\ !\ =1$，则$\sum_{d|gcd(a,b)}\mu(d)=0，=[gcd(a,b)==1]$。</p>
+<p>因为$\frac md$表示在$a∈[1,m]$中能被$d$整除的数的个数，$\frac nd$表示在$b∈[1,n]$中能被$d$整除的数的个数。</p>
+<p>所以，可证等价。</p>
+<p>所以有$f(m,n)=\sum_{d=1}^{min(m,n)}a[t]×(\sum_{a=1}^{\lfloor \frac mt\rfloor}\sum_{b=1}^{\lfloor \frac nt\rfloor}[d==1])=\sum_{d=1}^{min(m,n)}a[t]×g(\frac mt,\frac nt)$。</p>
+<h5 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h5><p>$\frac n1+\frac n2+\frac n3+\frac n4+…+\frac n{n-1}+\frac nn=nln(n)+C（C为欧拉函数）$</p>
+<p>没想平均时间复杂度为$O(ln(n))$，所以总时间复杂度为$O(nln(n))$。</p>
+<h4 id="CODE："><a href="#CODE：" class="headerlink" title="CODE："></a>CODE：</h4><p>因为总有$\phi(i)&lt;i$，预处理出$max(m,n)​$个逆元即可。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
