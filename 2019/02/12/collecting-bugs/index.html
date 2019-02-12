@@ -26,7 +26,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">collecting bugs</h3>
+    <h3 class="subtitle">POJ2096 Collecting Bugs</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -43,7 +43,7 @@
     <div class="section">
         <div class="article">
     <div class="main">
-        <h1 class="title">collecting bugs</h1>
+        <h1 class="title">POJ2096 Collecting Bugs</h1>
         <div class="stuff">
             <span>二月 12, 2019</span>
             
@@ -82,8 +82,11 @@
 <p>$4.$发现了旧$bug$种类，存在于旧子系统，$p_4=\frac in×\frac js$，还需要$f(i,j)$天。</p>
 <p>所以期望的转移方程为：</p>
 <script type="math/tex; mode=display">f(i,j)=p_1f(i+1,j+1)+p_2f(i+1,j)+p_3f(i,j+1)+p_4f(i,j)+1</script><p>移项$f(i,j)$可得：</p>
-<script type="math/tex; mode=display">f(i,j)=\frac{p_!f(i+1,j+1)+p_2f(i+1,j)+p_3f(i,j+1)+1}{1-p_4}</script><p>时间复杂度为$O(ns)$。</p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">f(i,j)=\frac{p_!f(i+1,j+1)+p_2f(i+1,j)+p_3f(i,j+1)+1}{1-p_4}​</script><p>时间复杂度为$O(ns)$。</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">0</span>, w = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">char</span> ch = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (!<span class="built_in">isdigit</span>(ch)) &#123;w |= ch == <span class="string">'-'</span>; ch = getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">isdigit</span>(ch)) &#123;x = (x &lt;&lt; <span class="number">3</span>) + (x &lt;&lt; <span class="number">1</span>) + ch - <span class="string">'0'</span>; ch = getchar();&#125;</span><br><span class="line">	<span class="keyword">return</span> w ? -x : x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n, s;</span><br><span class="line"><span class="keyword">double</span> f[<span class="number">1010</span>][<span class="number">1010</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;s))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">memset</span>(f,<span class="number">0</span>,<span class="keyword">sizeof</span>(f));</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = n; ~i; --i)</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = s; ~j; --j)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (i == n &amp;&amp; j == s) <span class="keyword">continue</span>;</span><br><span class="line">				<span class="keyword">double</span> p1 = <span class="number">1.0</span> * (n - i) / n * (s - j) / s;</span><br><span class="line">				<span class="keyword">double</span> p2 = <span class="number">1.0</span> * (n - i) / n * j / s;</span><br><span class="line">				<span class="keyword">double</span> p3 = <span class="number">1.0</span> * i / n * (s - j) / s;</span><br><span class="line">				<span class="keyword">double</span> p4 = <span class="number">1.0</span> * i / n * j / s;</span><br><span class="line">				f[i][j] = <span class="number">1.0</span> * (p1 * f[i + <span class="number">1</span>][j + <span class="number">1</span>] + p2 * f[i + <span class="number">1</span>][j] + p3 * f[i][j + <span class="number">1</span>] + <span class="number">1</span>) / (<span class="number">1.0</span> - p4);</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%.4f\n"</span>, f[<span class="number">0</span>][<span class="number">0</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>poj有毒啦！</p>
+<p>最后明明应该输出“$\%.4lf$”，结果强行”$\%.4f$”才过。</p>
+<p>[○･｀Д´･ ○]！！！</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
@@ -106,6 +109,21 @@
 
     </div>
 </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 <div id="music163player">
 	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1332052297&auto=1&height=66"></iframe>
