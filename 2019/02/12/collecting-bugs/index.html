@@ -57,6 +57,22 @@
 <p>Macrosoft knows about these plans and it wants to estimate the time that is required for Ivan to call its program disgusting. It’s important because the company releases a new version soon, so it can correct its plans and release it quicker. Nobody would be interested in Ivan’s opinion about the reliability of the obsolete version. </p>
 <p>A bug found in the program can be of any category with equal probability. Similarly, the bug can be found in any given subsystem with equal probability. Any particular bug cannot belong to two different categories or happen simultaneously in two different subsystems. The number of bugs in the program is almost infinite, so the probability of finding a new bug of some category in some subsystem does not reduce after finding any number of bugs of that category in that subsystem.</p>
 <p>Find an average time (in days of Ivan’s work) required to name the program disgusting. </p>
+<hr>
+<h6 id="简要翻译"><a href="#简要翻译" class="headerlink" title="简要翻译"></a>简要翻译</h6><p>一个软件有$s$个子系统，会产生$n$种$bug$。</p>
+<p>你每天会发现一个$bug$，这个$bug$属于某个子系统，属于某种$bug$。</p>
+<p>每天发现的$bug$，出现在每个子系统中的概率都是$\frac 1s$，属于每种$bug$的概率均为$\frac 1n$。</p>
+<p>求找出所有的$n$种$bug$，且每个子系统都找到$bug$所需要的天数的期望。</p>
+<hr>
+<h6 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h6><p>输入两个整数$n,s$。</p>
+<hr>
+<h6 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h6><p>输出期望，保留小数点后四位小数。</p>
+<hr>
+<h6 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h6><p>1 2</p>
+<hr>
+<h6 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h6><p>3.0000</p>
+<hr>
+<h6 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h6><p>$1&lt;n,s\leq 1,000$</p>
+<hr>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
