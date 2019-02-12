@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hexo</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="这篇文章的出现，预示着时隔多年，我的博客终于要启用啦！撒花花"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+</head>
+</html>
+<body class="loading">
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">OSU!</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">OSU!</h1>
+        <div class="stuff">
+            <span>二月 12, 2019</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Study-Note/">Study Note</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="A-GUGUFISHTION"><a href="#A-GUGUFISHTION" class="headerlink" title="A.GUGUFISHTION"></a>A.GUGUFISHTION</h4><h6 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h6><p>  osu 是一款群众喜闻乐见的休闲软件。  </p>
+<p>  我们可以把osu的规则简化与改编成以下的样子:  </p>
+<p>  一共有n次操作，每次操作只有成功与失败之分，成功对应1，失败对应0，n次操作对应为1个长度为n的01串。在这个串中连续的 X个1可以贡献X^3 的分数，这x个1不能被其他连续的1所包含（也就是极长的一串1，具体见样例解释）  </p>
+<p>  现在给出n，以及每个操作的成功率，请你输出期望分数，输出四舍五入后保留1位小数</p>
+<hr>
+<h6 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h6><p> 第一行有一个正整数n,表示操作个数。接下去n行每行有一个[0,1]之间的实数，表示每个操作的成功率。 </p>
+<hr>
+<h6 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h6><p> 只有一个实数，表示答案。答案四舍五入后保留1位小数。 </p>
+<hr>
+<h6 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h6><p>3<br>0.5<br>0.5<br>0.5 </p>
+<hr>
+<h6 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h6><p>6.0</p>
+<hr>
+<h6 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h6><p>  000分数为0，001分数为1，010分数为1，100分数为1，101分数为2，110分数为8，011分数为8，111分数为27，总和为48，期望为48/8=6.0  </p>
+<p> $N\leq 10^5$</p>
+<hr>
+<p>学习$luogu$上$hall_of_history$大佬简洁的题解。</p>
+<p>首先，学过数学的<del>幼儿园毕业生</del>都知道$(x+1)^3=x^3+3x^2+3x+1​$</p>
+<p>每多增加一个1，则答案就变为原先的$(x+1)^3=x^3+3x^2+3x+1$，</p>
+<p>也就是比原先多了$(x+1)^3-x^3=3x^2+3x+1$。</p>
+<p>维护这个增加的期望，维护$x_1[i]$表示$x$的期望，维护$x_2[i]$表示$x^2$的期望。</p>
+<p>则有$x_1[i]=(x_1[i-1]+1)×p[i]$，$x_2[i]=(x_2[i-1]+2×x_1[i-1]+1)×p[i]$。</p>
+<p>所以有： $Ans[i]=Ans[i-1]+(3×x_2[i-1]+3×x_1[i-1]+1)×p[i]$。</p>
+<p>我们求$Ans[n]$即可。</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> x = <span class="number">0</span>, w = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">char</span> ch = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (!<span class="built_in">isdigit</span>(ch)) &#123;w |= ch == <span class="string">'-'</span>; ch = getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">isdigit</span>(ch)) &#123;x = (x &lt;&lt; <span class="number">3</span>) + (x &lt;&lt; <span class="number">1</span>) + ch - <span class="string">'0'</span>; ch = getchar();&#125;</span><br><span class="line">	<span class="keyword">return</span> w ? -x : x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="keyword">double</span> p[N], x1[N], x2[N], Ans[N];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> n;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n = read();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) <span class="built_in">scanf</span>(<span class="string">"%lf"</span>, &amp;p[i]);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		x1[i] = (x1[i - <span class="number">1</span>] + <span class="number">1</span>) * p[i];</span><br><span class="line">		x2[i] = (x2[i - <span class="number">1</span>] + <span class="number">2</span> * x1[i - <span class="number">1</span>] + <span class="number">1</span>) * p[i];</span><br><span class="line">		Ans[i] = Ans[i - <span class="number">1</span>] + (<span class="number">3</span> * x2[i - <span class="number">1</span>] + <span class="number">3</span> * x1[i - <span class="number">1</span>] + <span class="number">1</span>) * p[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.1lf"</span>, Ans[n]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci="" data-cs="" data-r="" data-o="" data-a="" data-d="false">查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<div id="music163player">
+	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1332052297&auto=1&height=66"></iframe>
+</div>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
