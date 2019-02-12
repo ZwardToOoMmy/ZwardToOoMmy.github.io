@@ -26,7 +26,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle"><font color="#ff00ff">蒟蒻⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄报道</font><font color="#0099ff">　　　(置</font><font color="#00ff00">顶)</font><font color="#ff0000">(置</font><font color="#ff9900">顶)</font></h3>
+    <h3 class="subtitle">Bad Luck Island</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -43,16 +43,38 @@
     <div class="section">
         <div class="article">
     <div class="main">
-        <h1 class="title"><font color="#ff00ff">蒟蒻⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄报道</font><font color="#0099ff">　　　(置</font><font color="#00ff00">顶)</font><font color="#ff0000">(置</font><font color="#ff9900">顶)</font></h1>
+        <h1 class="title">Bad Luck Island</h1>
         <div class="stuff">
-            <span>十二月 31, 2099</span>
+            <span>二月 12, 2019</span>
             
-  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Others/">Others</a></li></ul>
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Study-Note/">Study Note</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <h3 id="这篇文章的出现，预示着时隔多年，我的博客终于要启用啦！"><a href="#这篇文章的出现，预示着时隔多年，我的博客终于要启用啦！" class="headerlink" title="这篇文章的出现，预示着时隔多年，我的博客终于要启用啦！"></a>这篇文章的出现，预示着时隔多年，我的博客终于要<del>启用</del>啦！</h3><h1 id="撒花花"><a href="#撒花花" class="headerlink" title="撒花花"></a><del>撒花花</del></h1>
+            <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="E-Bad-Luck-Island"><a href="#E-Bad-Luck-Island" class="headerlink" title="E.Bad Luck Island"></a>E.Bad Luck Island</h4><h6 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h6><p>The Bad Luck Island is inhabited by three kinds of species: $r$ rocks, $s$ scissors and $p$ papers. At some moments of time two random individuals meet (all pairs of individuals can meet equiprobably), and if they belong to different species, then one individual kills the other one: a rock kills scissors,scissors kill paper, and paper kills a rock. Your task is to determine for each species what is the probability that this species will be the only one to inhabit this island after a long enough period of time.</p>
+<hr>
+<h6 id="简要题意"><a href="#简要题意" class="headerlink" title="简要题意"></a>简要题意</h6><p>在一个岛上，有 $𝑟 + 𝑠 + 𝑝$ 个人，其中有$𝑟$个人有石头，$𝑠$个人有剪刀，$𝑝$个人有布。 遵循石头剪刀布的原则，输的人就狗带了。每两个人遇到概率的相等。<br>求每个人存活的概率。 显然有同种东西的人存活概率相等，你只需要输出有石头，剪刀，布的人的存活概率即可。</p>
+<hr>
+<h6 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h6><p>一行包括三个整数 $r,s,p$ ，如题意所示分别代表石头，剪刀，布。</p>
+<hr>
+<h6 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h6><p>输出三个实数，由空格隔开，分别代表石头，剪刀，布存活的概率，如果输出与答案的误差不超过$10^{-9}​$，则认为答案正确。</p>
+<hr>
+<h6 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h6><p>2 2 2</p>
+<hr>
+<h6 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h6><p>0.333333333333 0.333333333333 0.333333333333</p>
+<hr>
+<h6 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2"></a>Sample Input 2</h6><p>2 1 2</p>
+<hr>
+<h6 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2"></a>Sample Output 2</h6><p>0.150000000000 0.300000000000 0.550000000000</p>
+<hr>
+<h6 id="Sample-Input-3"><a href="#Sample-Input-3" class="headerlink" title="Sample Input 3"></a>Sample Input 3</h6><p>1 1 3</p>
+<hr>
+<h6 id="Sample-Output-3"><a href="#Sample-Output-3" class="headerlink" title="Sample Output 3"></a>Sample Output 3</h6><p>0.057142857143 0.657142857143 0.285714285714</p>
+<hr>
+<h6 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h6><p>$1\leq r,s,p\leq100​$</p>
+<hr>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
