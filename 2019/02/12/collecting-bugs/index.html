@@ -73,6 +73,17 @@
 <hr>
 <h6 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h6><p>$1&lt;n,s\leq 1,000$</p>
 <hr>
+<p>设$f(i,j)$表示已经找到$i$种$bug$，存在于$j$个子系统中的期望还要多少天。</p>
+<p>那么$f(n,s)=0$，$f(0,0)$即为<del>（正义）</del>答案。</p>
+<p>状态转移如下：</p>
+<p>$1.$发现了新$bug$种类，存在于新子系统，$p_1=\frac{n-i}n×\frac{s-j}s$，还需要$f(i+1,j+1)$天。</p>
+<p>$2.$发现了新$bug$种类，存在于旧子系统，$p_2=\frac{n-i}n×\frac js$，还需要$f(i+1,j)$天。</p>
+<p>$3.$发现了旧$bug$种类，存在于新子系统，$p_3=\frac in×\frac {s-j}s$，还需要$f(i,j+1)$天。</p>
+<p>$4.$发现了旧$bug$种类，存在于旧子系统，$p_4=\frac in×\frac js$，还需要$f(i,j)$天。</p>
+<p>所以期望的转移方程为：</p>
+<script type="math/tex; mode=display">f(i,j)=p_1f(i+1,j+1)+p_2f(i+1,j)+p_3f(i,j+1)+p_4f(i,j)+1</script><p>移项$f(i,j)$可得：</p>
+<script type="math/tex; mode=display">f(i,j)=\frac{p_!f(i+1,j+1)+p_2f(i+1,j)+p_3f(i,j+1)+1}{1-p_4}</script><p>时间复杂度为$O(ns)$。</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
