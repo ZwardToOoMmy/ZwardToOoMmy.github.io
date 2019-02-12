@@ -72,8 +72,12 @@
 <p>由欧拉函数的性质$\phi(p^k)=(p-1)×p^{k-1}(p为质数)$。</p>
 <p>令$d=gcd(a,b)=p_1^{k_1}×p_2^{k_2}×…×p_n^{k_n}​$。</p>
 <script type="math/tex; mode=display">G_u(a,b)=\frac {\phi(a,b)}{\phi(a)\phi(b)}=\frac{\phi(p_1^{2k_1}×p_2^{2k_2}×...×p_n^{2k_n})}{\phi(p_1^{k_1}×p_2^{k_2}×...×p_n^{k_n})^2}</script><p>由于欧拉函数为积性函数，且因为各项上下互质，展开约去。</p>
-<script type="math/tex; mode=display">G_u(a,b)=\frac {(p_1-1)×(p_2-1)×(p_3-1)×...×(p_n-1)×p_1^{2k_1-1}×p_2^{2k_2-1}×...×p_n^{2k_n-1}}{(p_1-$1)^2×(p_2-1)^2×(p_3-1)^2×...×(p_n-1)^2×p_1^{k_1-1}×p_2^{k_2-1}×...×p_n^{k_n-1}}​</script><script type="math/tex; mode=display">=\frac {p_1×p_2×p_3×...×p_n}{(p_1-1)×(p_2-1)×...×(p_n-1)}=\frac {p_1×p_2×p_3×...×p_n×p_1^{k_1-1}×p_2^{k_2-1}×...×p_n^{k_n-1}}{(p_1-1)×(p_2-1)×(p_3-1)×...×(p_n-1)×p_1^{k_1-1}×p_2^{k_2-2}×...×p_n^{k_n-1}}​</script><script type="math/tex; mode=display">=\frac {p_1^{k_1}×p_2^{k_2}×...×p_n^{k_n}}{\phi(p_1^{k_1}×p_2^{k_2}×...×p_n^{k_n})}=\frac {d}{\phi{d}}​</script><p>令$a[i]=\frac i{\phi(i)}​$，$f(m,n)=\sum_{a=1}^m\sum_{b=1}^nG_u(a,b)=\sum_{a=1}^m\sum_{b=1}^na×d​$</p>
-<script type="math/tex; mode=display">f(m,n)=\sum_{d=1}^{min(m,n)}\sum_{a=1}^m\sum_{b=1}^na[t]×[d==t]=\sum_{d=1}^{min(m,n)}\sum_{a=1}^{\lfloor \frac mt\rfloor}\sum_{b=1}^{\lfloor \frac nt\rfloor}a[t]×[d==1]​</script><p>$[到此处d的定义取消，懒得修改，写完发现不对了]​$╮(╯▽╰)╭</p>
+<p>$G_u(a,b)=\frac {(p_1-1)×(p_2-1)×(p_3-1)×…×(p_n-1)×p_1^{2k_1-1}×p_2^{2k_2-1}×…×p_n^{2k_n-1}}{(p_1-$1)^2×(p_2-1)^2×(p_3-1)^2×…×(p_n-1)^2×p_1^{k_1-1}×p_2^{k_2-1}×…×p_n^{k_n-1}}​$</p>
+<p>$=\frac {p_1×p_2×p_3×…×p_n}{(p_1-1)×(p_2-1)×…×(p_n-1)}=\frac {p_1×p_2×p_3×…×p_n×p_1^{k_1-1}×p_2^{k_2-1}×…×p_n^{k_n-1}}{(p_1-1)×(p_2-1)×(p_3-1)×…×(p_n-1)×p_1^{k_1-1}×p_2^{k_2-2}×…×p_n^{k_n-1}}​$</p>
+<p>$=\frac {p_1^{k_1}×p_2^{k_2}×…×p_n^{k_n}}{\phi(p_1^{k_1}×p_2^{k_2}×…×p_n^{k_n})}=\frac {d}{\phi{d}}​$</p>
+<p>令$a[i]=\frac i{\phi(i)}​$，$f(m,n)=\sum_{a=1}^m\sum_{b=1}^nG_u(a,b)=\sum_{a=1}^m\sum_{b=1}^na×d​$</p>
+<p>$f(m,n)=\sum_{d=1}^{min(m,n)}\sum_{a=1}^m\sum_{b=1}^na[t]×[d==t]=\sum_{d=1}^{min(m,n)}\sum_{a=1}^{\lfloor \frac mt\rfloor}\sum_{b=1}^{\lfloor \frac nt\rfloor}a[t]×[d==1]$</p>
+<p>$[到此处d的定义取消，懒得修改，写完发现不对了]​$╮(╯▽╰)╭</p>
 <p>令$g(m,n)=\sum_{a=1}^m\sum_{b=1}^n[d==1]=\sum_{a=1}^m\sum_{b=1}^n\sum_{d|gcd(a,b)}\mu(d)=\sum_{d=1}^{min(a,b)}\mu(d)×\frac md×\frac nd$</p>
 <p>因为有：</p>
 <p>$\sum_{d|n}\mu(d)=1\ \ (n==1)$</p>
