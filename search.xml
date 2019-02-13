@@ -9,6 +9,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[HDU 1848 Fibonacci again and again]]></title>
+    <url>%2F2019%2F02%2F13%2FHDU-1848-Fibonacci-again-and-again%2F</url>
+    <content type="text"><![CDATA[~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题#.Fibonacci again and again题面 任何一个大学生对菲波那契数列($Fibonacci numbers$)应该都不会陌生，它是这样定义的：$F(1)=1;$$F(2)=2;$$F(n)=F(n-1)+F(n-2)(n&gt;=3);$所以，$1,2,3,5,8,13$……就是菲波那契数列。在HDOJ上有不少相关的题目，比如$1005\ Fibonacci\ again\ and\ again$就是曾经的浙江省赛题。今天，又一个关于$Fibonacci$的题目出现了，它是一个小游戏，定义如下：1、 这是一个二人游戏;2、 一共有$3$堆石子，数量分别是$m, n, p$个；3、 两人轮流走;4、 每走一步可以选择任意一堆石子，然后取走$f$个；5、 $f$只能是菲波那契数列中的元素（即每次只能取$\ 1，2，3，5，8$…等数量）；6、 最先取光所有石子的人为胜者； 假设双方都使用最优策略，请判断先手的人会赢还是后手的人会赢。 Input输入数据包含多个测试用例，每个测试用例占一行，包含$3​$个整数$m,n,p​$。$m=n=p=0​$则表示输入结束。 Output 如果先手的人能赢，请输出“$Fibo$”，否则请输出“$Nacci$”，每个实例的输出占一行。 Sample Input1 1 1 1 4 1 0 0 0 Sample OutputFibo Nacci Hint$1\leq m,n,p\leq 1,000$ 来自$ACM\ Short\ Term\ Exam\ 2007/12/13$ (Html Address:http://acm.hdu.edu.cn/search.php?field=problem&amp;key=ACM+Short+Term+Exam_2007%2F12%2F13&amp;source=1&amp;searchmode=source) 这题啊！ 裸的SG函数呀！ 没学过的大佬们逛一波博客吧！ （maybe…几万年以后我也会写一篇的吧~） Code1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253#include&lt;bits/stdc++.h&gt;using namespace std;int read()&#123; int x=0,w=0; char ch=0; while(!isdigit(ch))&#123;w|=ch=='-';ch=getchar();&#125; while(isdigit(ch))&#123;x=(x&lt;&lt;3)+(x&lt;&lt;1)+ch-'0';ch=getchar();&#125; return w? -x:x;&#125;const int MAXN=1010;int f[MAXN],sg[MAXN];void Fibonacci()&#123; f[1]=1,f[2]=2; for(int i=3;i&lt;=200;++i) &#123; f[i]=f[i-1]+f[i-2]; if(f[i]&gt;1000) break; &#125;&#125;map&lt;int,int&gt; ma;void Build_Map(int lim)&#123; for(int i=1;i&lt;=lim;++i) &#123; ma.clear(); for(int j=1;f[j]&lt;=i;++j) ++ma[sg[i-f[j]]]; for(int j=0;j&lt;=lim;++j) if(!ma[j]) &#123; sg[i]=j; break; &#125; &#125;&#125;int a,b,c;int main()&#123; Fibonacci(); Build_Map(1000); while(1) &#123; a=read(),b=read(),c=read(); if(!a&amp;&amp;!b&amp;&amp;!c) return 0; int sum=0; sum^=sg[a]^sg[b]^sg[c]; if(!sum) puts("Nacci"); else puts("Fibo"); &#125; return 0;&#125;]]></content>
+      <categories>
+        <category>寒假集训</category>
+      </categories>
+      <tags>
+        <tag>Study Note</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2.13-Contest]]></title>
     <url>%2F2019%2F02%2F13%2F2-13-Contest%2F</url>
     <content type="text"><![CDATA[本蒟蒻较懒，想直接贴pdf的图片。 于是下载了一个转化器，结果最后一张还带了水印。 (能看就行)]]></content>
