@@ -9,6 +9,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[CodeForces#271 F.Ant Colony]]></title>
+    <url>%2F2019%2F02%2F14%2FCodeForces-271-F-Ant-Colony%2F</url>
+    <content type="text"><![CDATA[~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题D.Ant Colony题面Mole is hungry again. He found one ant colony, consisting of $n$ ants, ordered in a row. Each ant $i$ ($1\leq i\leq n$) has a strength $s_i$. In order to make his dinner more interesting, Mole organizes a version of «Hunger Games» for the ants. He chooses two numbers $l$ and $r$ ($1\leq l\leq r\leq n$) and each pair of ants with indices between $l$ and $r$ (inclusively) will fight. When two ants $i$ and $j$ fight, ant $s_i$ gets one battle point only if $s_i$ divides $s_j$ (also, ant $j$ gets one battle point only if $s_j$ divides $s_i$). After all fights have been finished, Mole makes the ranking. An ant $i​$, with $v_i​$ battle points obtained, is going to be freed only if $v_i=r-l​$, or in other words only if it took a point in every fight it participated. After that, Mole eats the rest of the ants. Note that there can be many ants freed or even none. In order to choose the best sequence, Mole gives you $t$ segments $[l_i,r_i]$ and asks for each of them how many ants is he going to eat if those ants fight. 简要翻译给定一个长度为$𝑛$的序列，$𝑞$个询问。 每次给定区间$ 𝑙,𝑟 $，将$ 𝑙,𝑟 $中所有数两两比较。 如果$𝑎,𝑏 ∈ 𝑙,𝑟 $，$𝑎|𝑏$则$𝑎$得一分，$𝑏|𝑎$则$𝑏$得一分。 问有多少个数没有得到满分。 Input第一行包含一个整数$n$，代表序列的大小。 第二行包含$n$个整数，$s_1,s_2,s_3…s_n$，代表序列的值。 第三行包含一个整数$t$，代表询问个数。 下面有$t$行，每行包含两个整数$l_i,r_i$描述一个询问。 Output输出包含$t$行。 第$i$行输出一个数表示 $[l_i,r_i]$ 中的没有满分的数的个数。 Sample Input5 1 3 2 4 2 4 1 5 2 5 3 5 4 5 Sample Output4 4 1 1 Note || （本来想搬样例解释的，不过既然是题解那就算了吧） Hint$1\leq n\leq 10^5$，$1\leq s_i\leq 10^9$。 $1\leq t\leq 10^5$，$1\leq l_i\leq r_i\leq n$。 我们可以比较显然的知道，能留下的数一定是区间的最小$gcd$，于是我们就只要找区间内与区间最小$gcd$相等的数的个数。 区间最小$gcd$一定小于等于区间$min$，我们只要判断最小值是否是区间最小$gcd$，如果是，就可以求出最小值的个数，也就能求出答案了。 根据数据范围和要求维护的数据，我们尝试用线段树来维护。 分别维护$gcd$，区间$min$，以及区间$min$的个数。 Code12]]></content>
+      <categories>
+        <category>寒假集训</category>
+      </categories>
+      <tags>
+        <tag>Study Note</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[image]]></title>
     <url>%2F2019%2F02%2F14%2Fimage%2F</url>
     <content type="text"><![CDATA[]]></content>
