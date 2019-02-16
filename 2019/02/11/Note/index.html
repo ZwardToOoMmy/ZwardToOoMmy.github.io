@@ -1,0 +1,389 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="author" content="ZwardToOoMmy">
+  
+  
+  
+  
+    <meta name="description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题D.约数个数和题面设d(x)为x的约数个数，给定N、M，求  $\sum_{i=1}^{N}\sum_{j=1}^{M}d(i×j)$.
+
+Input输入文件包含多组测试数据。
+第一行，一个整数T，表示测试数据的组数。  
+接下来的T行，每行两个整数N、M。
+
+OutputT行，每行一个整数，...">
+  
+  <title>bzoj 3994/luogu P3327 约数个数和 [ ZT's Blog ]</title>
+  
+  
+    <link rel="shortcut icon" href="/hollow.ico">
+  
+  
+  <link rel="stylesheet" href="/css/random.css">
+<link rel="stylesheet" href="/css/vegas.min.css">
+<link rel="stylesheet" href="/css/highlight-railscasts.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/jquery.fancybox-thumbs.css">
+<link rel="stylesheet" href="/css/plyr.css">
+  
+</head>
+
+<body>
+<div class="side-navigate hide-area">
+  
+    <div class="item prev">
+      <a href="/2019/02/11/欧拉心算/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        bzoj 4804 欧拉心算
+      </div>
+    </div>
+  
+  
+    <div class="item next">
+      <a href="/2019/02/11/hello-world/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        Hello World
+      </div>
+    </div>
+  
+</div>
+<div id="outer-container" class="hide-area">
+<div id="container">
+  <div id="menu-outer" class="slide-down">
+    <div id="menu-inner">
+      <div id="brand">
+        
+        <a onclick="openUserCard()">
+          <img id="avatar" src="https://avatars3.githubusercontent.com/u/13285397?s=460&v=4">
+          <div id="homelink">ZT's Blog</div>
+        </a>
+      </div>
+      <div id="menu-list">
+        <ul>
+        
+        
+          
+            <li>
+          
+            <a href="/index.html">Home</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/archives">Archives</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/tags">Tags</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/categories">Categories</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/about">About</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="https://github.com/Baileyswu">Github</a>
+            
+          </li>
+        
+        </ul>
+      </div>
+      <div id="show-menu">
+        <button>Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+  
+
+  <article id="post">
+    <h1>bzoj 3994/luogu P3327 约数个数和</h1>
+    <p class="page-title-sub">
+      <span id="post-title-date">Created at 2019-02-11</span>
+      
+        <span id="post-title-updated">Updated at 2019-02-13</span>
+      
+      
+      <span id="post-title-categories">Category
+      
+      
+        
+        
+        <a href="/categories/寒假集训/">寒假集训</a>
+      
+      </span>
+      
+      
+      <span id="post-title-tags">
+      Tag
+      
+      
+        
+        
+        <a href="/tags/Study-Note/">Study Note</a>
+      
+      </span>
+      
+    </p>
+    
+    <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="D-约数个数和"><a href="#D-约数个数和" class="headerlink" title="D.约数个数和"></a>D.约数个数和</h4><h6 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h6><p>设d(x)为x的约数个数，给定N、M，求  $\sum_{i=1}^{N}\sum_{j=1}^{M}d(i×j)$.</p>
+<hr>
+<h6 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h6><p>输入文件包含多组测试数据。</p>
+<p>第一行，一个整数T，表示测试数据的组数。  </p>
+<p>接下来的T行，每行两个整数N、M。</p>
+<hr>
+<h6 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h6><p>T行，每行一个整数，表示你所求的答案。</p>
+<hr>
+<h6 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h6><p>2<br>7 4<br>5 6</p>
+<hr>
+<h6 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h6><p>110</p>
+<p>121</p>
+<hr>
+<h6 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h6><p>$1\leq N,M \leq 50,000$</p>
+<p>$1\leq T \leq 50,000$</p>
+<hr>
+<p>哎，今天fhj大佬讲课也是很无奈，莫比乌斯反演虽然是学了，但是确实不太会用哇。</p>
+<p>公式恐惧症患者一枚……</p>
+<h5 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h5><p>​    首先，我们证明一条结论：<script type="math/tex">d(n×m)=\sum_{i|n}\sum_{j|m}[gcd(i,j)==1]</script></p>
+<p>​    证明：对于nm每一个质因子$p_i$，我们令$n={p_i}^{a_i}×n_x,m={p_i}^{b_i}×m_x$，则有<script type="math/tex">d(n×m)=\Pi_i(a_i+b_i+1)</script>​，设 $l$ 和 $t$ 互质且不含质因子$p_i$，那么$(l×{p_i}^{a_i},t),(l×{p_i}^{a_i-1})…(l,t)…(l,t×{p_i}^{b_i-1}),(l,t×{p_i}^{b_i})$都是互质的数对，而 $ l$ 和 $ t $ 的取法刚好是$\Pi_{k\neq i}(a_k+b_k+1)$种。</p>
+<h5 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h5><p>​    下面是公式恐惧症的“福利”？！</p>
+<script type="math/tex; mode=display">\sum_{i=1}^n\sum_{j=1}^md(i×j)=\sum_{i=1}^n\sum_{j=1}^m\sum_{k|i}\sum_{l|j}[gcd(k,l)==1]​</script><p>​    现在我们枚举每一个数对$(k,l)$,那么它们会被算多少遍呢？每一个$k$的倍数都会算一次$k$，每一个$l$的倍数又会算一次$l$,而用$\frac nk$来表示<em>n</em>以内<em>k</em>的倍数有多少个是显然的，所以：</p>
+<script type="math/tex; mode=display">\sum_{k=1}^n\sum_{l=1}^m\frac nk×\frac ml[gcd(k,l)==1]</script><p>​    然后我们能够用莫比乌斯函数的性质：</p>
+<script type="math/tex; mode=display">\sum_{d|n}\mu(d)=1\ (n==1)</script><script type="math/tex; mode=display">\sum_{d|n}\mu(d)=0\ (n>1)</script><p>​    那我们就可以得到：</p>
+<script type="math/tex; mode=display">\sum_{k=1}^n\sum_{l=1}^m\frac nk×\frac ml\sum_{d|gcd(k,l)}\mu(d)</script><p>​    如果$gcd(k,l)==1$，此时后面的这些等于1，否则是0。</p>
+<p>​    我们就能得到：</p>
+<script type="math/tex; mode=display">\sum_{k=1}^n\sum_{l=1}^m\frac nk× \frac ml\sum_{d|k且d|l}\mu(d)</script><p>​    我们只要枚举$\mu(d)$，显然，我们只要枚举d的倍数来与$\mu(d)$相乘即可。</p>
+<script type="math/tex; mode=display">\sum_{d=1}^{min(n,m)}\mu(d)\sum_{i=1}^\frac nd\sum_{j=1}^\frac md\frac n{d_i}×\frac m{d_j}</script><h5 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h5><p>​    我们由第二步继续变形可得：</p>
+<script type="math/tex; mode=display">\sum_{d=1}^{min(n,m)}\mu(d)×(\sum_{k=1}^{\frac nd}\frac n{dk})×(\sum_{l=1}^{\frac md}\frac m{dl})</script><p>令$g(x)=\sum_{i=1}^x\frac xi​$</p>
+<script type="math/tex; mode=display">\sum_{d=1}^{min(n,m)}\mu(d)×g(\frac nd)×g(\frac md)</script><p>我们预处理出$g(x)​$即可。</p>
+<p>观察一下$g(x)$，就会发现其实式子可以这么理解：$x$以内有约数<em>i</em>的数的个数和，也就是可看作原题中$d(x)$的前缀和<br>要求$d(x)$的前缀和，可以求出每一个$d(x)$,也就是用线性筛求啦，要记录一下$c(x)$:将$x$分解质因数后，最小质因数的指数。<br>那么参见第一步，<em>x</em>的最小质因数对$d(x)$的贡献为$c(x)+1$。</p>
+<h5 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h5><p>​    代码实现</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">0</span>, w = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">char</span> ch = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (!<span class="built_in">isdigit</span>(ch)) &#123;w |= ch == <span class="string">'-'</span>; ch = getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">isdigit</span>(ch)) &#123;x = (x &lt;&lt; <span class="number">3</span>) + (x &lt;&lt; <span class="number">1</span>) + ch - <span class="string">'0'</span>; ch = getchar();&#125;</span><br><span class="line">	<span class="keyword">return</span> w ? -x : x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> mu[<span class="number">500010</span>],p[<span class="number">50010</span>],cnt,n,m;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> a[<span class="number">500010</span>],b[<span class="number">500010</span>];</span><br><span class="line"><span class="keyword">bool</span> notprime[<span class="number">500010</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Prime</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	mu[<span class="number">1</span>]=a[<span class="number">1</span>]=b[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=<span class="number">50000</span>;++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(!notprime[i])</span><br><span class="line">		&#123;</span><br><span class="line">			p[++cnt]=i;</span><br><span class="line">			mu[i]=<span class="number">-1</span>,a[i]=<span class="number">1</span>,b[i]=<span class="number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=cnt&amp;&amp;i*p[j]&lt;=<span class="number">50000</span>;++j)</span><br><span class="line">		&#123;</span><br><span class="line">			notprime[i*p[j]]=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(i%p[j]==<span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				b[i*p[j]]=b[i]/(a[i]+<span class="number">1</span>)*(a[i]+<span class="number">2</span>);</span><br><span class="line">				a[i*p[j]]=a[i]+<span class="number">1</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				b[i*p[j]]=b[i]*b[p[j]];</span><br><span class="line">				a[i*p[j]]=<span class="number">1</span>;</span><br><span class="line">				mu[i*p[j]]=-mu[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=<span class="number">50000</span>;++i)</span><br><span class="line">	&#123;</span><br><span class="line">		b[i]+=b[i<span class="number">-1</span>];</span><br><span class="line">		mu[i]+=mu[i<span class="number">-1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> T=read();</span><br><span class="line">	Prime();</span><br><span class="line">	<span class="keyword">while</span>(T--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">long</span> <span class="keyword">long</span> result=<span class="number">0</span>;</span><br><span class="line">		n=read(),m=read();</span><br><span class="line">		<span class="keyword">if</span>(n&gt;m) swap(n,m);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>,j;i&lt;=n;i=j+<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			j=min(n/(n/i),m/(m/i));</span><br><span class="line">			result+=(mu[j]-mu[i<span class="number">-1</span>])*b[n/i]*b[m/i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;result&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="p-s"><a href="#p-s" class="headerlink" title="p.s."></a>p.s.</h4><p>还有很重要的一点，如果初始化用这样a[N]={0,1}，会导致exe文件过大而无法提交，嘤嘤嘤，感谢vhosc巨佬……(/≧▽≦)/</p>
+
+  </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
+  <div class="random-toc">
+    <h2>Table of Content</h2>
+    <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="toc-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#2019寒假集训题"><span class="toc-text">2019寒假集训题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#D-约数个数和"><span class="toc-text">D.约数个数和</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#题面"><span class="toc-text">题面</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Input"><span class="toc-text">Input</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Output"><span class="toc-text">Output</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Sample-Input"><span class="toc-text">Sample Input</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Sample-Output"><span class="toc-text">Sample Output</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Hint"><span class="toc-text">Hint</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#第一步"><span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#第二步"><span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#第三步"><span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#第四步"><span class="toc-text">第四步</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#p-s"><span class="toc-text">p.s.</span></a>
+  </li></div>
+</div>
+
+  
+<nav id="pagination">
+  
+    <a href="/2019/02/11/欧拉心算/" class="prev">&larr; Prev post bzoj 4804 欧拉心算</a>
+  
+
+  
+
+  
+    <a href="/2019/02/11/hello-world/" class="next">Next post Hello World &rarr;</a>
+  
+</nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
+
+      
+      
+    </div>
+  </div>
+
+  <div id="bottom-outer">
+    <div id="bottom-inner">
+      Site by ZwardToOoMmy using
+      <a href="http://hexo.io">Hexo</a> & <a href="https://github.com/stiekel/hexo-theme-random">Random</a>
+      <br>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<div id="user-card">
+  <div class="center-field">
+    <img class="avatar" src="https://avatars3.githubusercontent.com/u/13285397?s=460&v=4">
+    <p id="description"></p>
+    <ul class="social-icon">
+  
+  
+    <li>
+      <a href="https://github.com/Baileyswu">
+        
+          <i class="icon iconfont github">&#xe606;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://weibo.com/Danliwoo">
+        
+          <i class="icon iconfont weibo">&#xe602;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="mailto:wulidan0530@live.com">
+        
+          M
+        
+      </a>
+    </li>
+  
+</ul>
+  </div>
+</div>
+
+
+<div id="btn-view">Hide</div>
+
+<script>
+// is trigger analytics / tongji script
+var isIgnoreHost = false;
+
+if(window && window.location && window.location.host) {
+  isIgnoreHost = ["localhost","127.0.0.1"].some(function(address){
+    return 0 === window.location.host.indexOf(address);
+  });
+}
+
+var isTriggerAnalytics = !( true && isIgnoreHost );
+
+</script>
+
+
+
+
+  
+  
+    <script src="/js/jquery-2.2.3.min.js"></script>
+  
+    <script src="/js/vegas.min.js"></script>
+  
+    <script src="/js/random.js"></script>
+  
+    <script src="/js/highlight.pack.js"></script>
+  
+    <script src="/js/jquery.mousewheel.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox-thumbs.js"></script>
+  
+    <script src="/js/plyr.js"></script>
+  
+
+<script>
+
+  // fancybox
+  var backgroundImages = [];
+  
+  $('#post').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
+      var alt = this.alt || this.title;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'post' + i);
+    });
+  });
+  $(".fancybox").fancybox();
+
+var vegasConfig = {"preload­Image":true,"transition":["flash"],"timer":true,"delay":1500000,"shuffle":true,"count":12};
+var unsplashConfig = {"gravity":"center"};
+// is show background images
+var turnoffBackgroundImage = false;
+
+
+
+
+var backgroundColor = "34495E";
+
+$(".fancybox-thumb").fancybox({
+  prevEffect: 'none',
+  nextEffect: 'none',
+  helpers: {
+    title: {
+      type: 'outside'
+    },
+    thumbs: {
+      width: 50,
+      height: 50
+    }
+  }
+});
+
+// show video with plyr
+$(".video-container iframe").each(function(i){
+  var url = $(this).attr('src');
+  var id = url.split('/').pop();
+  var plyrContainer = document.createElement('div');
+  plyrContainer.className = 'plyr';
+  var plyrElement = document.createElement('div');
+  plyrElement.dataset.videoId = id;
+  switch(true) {
+    case url.search('youtube.com') >= 0:
+      plyrElement.dataset.type = 'youtube';
+      break;
+    case url.search('vimeo.com') >= 0:
+      plyrElement.dataset.type = 'vimeo';
+      break;
+    default:
+      return;
+  };
+  plyrContainer.appendChild(plyrElement);
+  $(this).parent().html(plyrContainer);
+});
+plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
+</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"live2d-widget-model-tamamo"},"display":{"position":"left","width":110,"height":280,"superSample":2,"hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+</html>
+
