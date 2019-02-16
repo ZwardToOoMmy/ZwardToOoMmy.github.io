@@ -87,20 +87,20 @@
 
 
 
-<meta name="description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题E.XOR on Segment题面You’ve got an array a a a , consisting of n n n integers a1,a2,…,an a_{1},a_{2},…,a_{n} a1,a2,…,an . You are allowed to perform two">
+<meta name="description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题A.XOR on Segment题面You’ve got an array $a$ , consisting of $n$ integers $a_1$,$a_2$,…,$a_n$. You are allowed to perform two operations on this array:">
 <meta name="keywords" content="Study Note">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CodeForces#242 E.XOR on Segment">
 <meta property="og:url" content="http://yoursite.com/2019/02/15/CodeForces-242-E-XOR-on-Segment/index.html">
 <meta property="og:site_name" content="ZT&#39;s Blog">
-<meta property="og:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题E.XOR on Segment题面You’ve got an array a a a , consisting of n n n integers a1,a2,…,an a_{1},a_{2},…,a_{n} a1,a2,…,an . You are allowed to perform two">
+<meta property="og:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题A.XOR on Segment题面You’ve got an array $a$ , consisting of $n$ integers $a_1$,$a_2$,…,$a_n$. You are allowed to perform two operations on this array:">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cdn.luogu.org/upload/vjudge_pic/CF242E/a6ed6800239445c652bf1618450a09b2fce8b86d.png">
 <meta property="og:image" content="https://cdn.luogu.org/upload/vjudge_pic/CF242E/a0b0fe9e9428287337c0277ea02ca07fcf0a01a7.png">
-<meta property="og:updated_time" content="2019-02-15T06:13:01.263Z">
+<meta property="og:updated_time" content="2019-02-15T10:09:42.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CodeForces#242 E.XOR on Segment">
-<meta name="twitter:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题E.XOR on Segment题面You’ve got an array a a a , consisting of n n n integers a1,a2,…,an a_{1},a_{2},…,a_{n} a1,a2,…,an . You are allowed to perform two">
+<meta name="twitter:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题A.XOR on Segment题面You’ve got an array $a$ , consisting of $n$ integers $a_1$,$a_2$,…,$a_n$. You are allowed to perform two operations on this array:">
 <meta name="twitter:image" content="https://cdn.luogu.org/upload/vjudge_pic/CF242E/a6ed6800239445c652bf1618450a09b2fce8b86d.png">
 
 
@@ -401,13 +401,57 @@
       
 
       
-        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="E-XOR-on-Segment"><a href="#E-XOR-on-Segment" class="headerlink" title="E.XOR on Segment"></a>E.XOR on Segment</h4><h6 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h6><p>You’ve got an array a a a , consisting of n n n integers a1,a2,…,an a_{1},a_{2},…,a_{n} a1,a2,…,an . You are allowed to perform two operations on this array:</p>
+        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="A-XOR-on-Segment"><a href="#A-XOR-on-Segment" class="headerlink" title="A.XOR on Segment"></a>A.XOR on Segment</h4><h6 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h6><p>You’ve got an array $a$ , consisting of $n$ integers $a_1$,$a_2$,…,$a_n$. You are allowed to perform two operations on this array:</p>
 <ol>
-<li>Calculate the sum of current array elements on the segment [l,r] [l,r] [l,r] , that is, count value al+al+1+…+ar a_{l}+a_{l+1}+…+a_{r} al+al+1+…+ar .</li>
-<li>Apply the xor operation with a given number x x x to each array element on the segment [l,r] [l,r] [l,r] , that is, execute <img src="https://cdn.luogu.org/upload/vjudge_pic/CF242E/a6ed6800239445c652bf1618450a09b2fce8b86d.png" alt="img">. This operation changes exactly $r-l+1$ array elements.</li>
+<li>Calculate the sum of current array elements on the segment $[l,r]$  , that is, count value $a_l+a_{l+1}+…+a_r$ .</li>
+<li>Apply the $xor$ operation with $a$ given number $x$ to each array element on the segment $[l,r]$ , that is, execute <img src="https://cdn.luogu.org/upload/vjudge_pic/CF242E/a6ed6800239445c652bf1618450a09b2fce8b86d.png" alt="img">. This operation changes exactly $r-l+1$ array elements.</li>
 </ol>
-<p>Expression <img src="https://cdn.luogu.org/upload/vjudge_pic/CF242E/a0b0fe9e9428287337c0277ea02ca07fcf0a01a7.png" alt="img"> means applying bitwise xor operation to numbers $x$ and $y$  . The given operation exists in all modern programming languages, for  example in language C++ and Java it is marked as “^”, in Pascal — as  “$xor$”.</p>
+<p>Expression <img src="https://cdn.luogu.org/upload/vjudge_pic/CF242E/a0b0fe9e9428287337c0277ea02ca07fcf0a01a7.png" alt="img"> means applying bitwise xor operation to numbers $x$ and $y$  . The given operation exists in all modern programming languages, for  example in language $C++$ and Java it is marked as “^”, in Pascal — as  “$xor$”.</p>
 <p>You’ve got a list of m m m  operations of the indicated type. Your task is to perform all given  operations, for each sum query you should print the result you get.</p>
+<hr>
+<h6 id="简要翻译"><a href="#简要翻译" class="headerlink" title="简要翻译"></a>简要翻译</h6><p>给定一个长为$n$($n\leq10^5$)的数组</p>
+<p>数组里的数不超过$10^6$</p>
+<p>有两种操作：</p>
+<p>1:求$sum[l,r]$;</p>
+<p>2:对$[l,r]$中的所有数和$x$异或</p>
+<hr>
+<h6 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h6><p>第一行包含一个整数$n$，表示数组的长度。</p>
+<p>第二行包含用空格隔开的$n$个整数，$a_1,a_2,a_3,…,a_n$表示数组。</p>
+<p>第三行包含一个整数$m$，表示操作的个数。</p>
+<p>下面包含$m$行，每行包含一个整数$t_i$，表示操作的类型。</p>
+<ul>
+<li><p>当$t_i=1$时，之后包含2个整数$l,r$，求$sum[l,r]$。</p>
+</li>
+<li><p>当$t_i=2$时，之后包含3个整数$l,r,x$，对$[l,r]$的数与$x$进行异或操作。</p>
+</li>
+</ul>
+<hr>
+<h6 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h6><p>对于每个操作$1$，输出一行一个整数代表答案。</p>
+<h1 id="请不要使用”-lld​-”去读入或输出-long-long​-；"><a href="#请不要使用”-lld​-”去读入或输出-long-long​-；" class="headerlink" title="请不要使用”$\%lld​$”去读入或输出$long\ long​$；"></a>请不要使用”$\%lld​$”去读入或输出$long\ long​$；</h1><h1 id="你最好使用”-cin​-cout​-”或者”-I64d​-”。"><a href="#你最好使用”-cin​-cout​-”或者”-I64d​-”。" class="headerlink" title="你最好使用”$cin​$,$cout​$”或者”$\%I64d​$”。"></a>你最好使用”$cin​$,$cout​$”或者”$\%I64d​$”。</h1><hr>
+<h6 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h6><p>5<br>4 10 3 13 7<br>8<br>1 2 4<br>2 1 3 3<br>1 2 4<br>1 3 3<br>2 2 5 5<br>1 1 5<br>2 1 2 10<br>1 2 3</p>
+<hr>
+<h6 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h6><p>26</p>
+<p>22</p>
+<p>0</p>
+<p>34</p>
+<p>11</p>
+<hr>
+<h6 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2"></a>Sample Input 2</h6><p>6<br>4 7 4 0 7 3<br>5<br>2 2 3 8<br>1 1 5<br>2 3 5 1<br>2 4 5 6<br>1 2 3</p>
+<hr>
+<h6 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2"></a>Sample Output 2</h6><p>38</p>
+<p>28</p>
+<hr>
+<h6 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h6><p>$1\leq n\leq 10^5，0\leq a_i\leq 10^6$。</p>
+<p>$1\leq m\leq 5×10^4$，$t=1\ or\ 2$。</p>
+<p>$1\leq l_i\leq r_i\leq n$，$1\leq x_i\leq 10^6$。</p>
+<hr>
+<p>区间的异或难以维护。</p>
+<p>我们可以把所有的数拆成二进制的，那么由数据范围可知，每个数的二进制位数不超过20位，我们可以建20棵线段树。</p>
+<p>每一棵线段树维护区间取反，$0→1$或$1→0$；区间求和。</p>
+<p>所以用一个标记即可解决。</p>
+<p>时间复杂度为$O(nklogn)$，$k$为二进制转化的位数，即所需线段树个数，$k\leq20$。</p>
+<hr>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">0</span>, w = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">char</span> ch = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (!<span class="built_in">isdigit</span>(ch)) &#123;w |= ch == <span class="string">'-'</span>; ch = getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">isdigit</span>(ch)) &#123;x = (x &lt;&lt; <span class="number">3</span>) + (x &lt;&lt; <span class="number">1</span>) + ch - <span class="string">'0'</span>; ch = getchar();&#125;</span><br><span class="line">	<span class="keyword">return</span> w ? -x : x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">100010</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf=<span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">seg_tree</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> s,Xor;</span><br><span class="line">&#125;t[N&lt;&lt;<span class="number">2</span>][<span class="number">22</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pushdown</span><span class="params">(<span class="keyword">int</span> root,<span class="keyword">int</span> len,<span class="keyword">int</span> bit)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!t[root][bit].Xor) <span class="keyword">return</span>;</span><br><span class="line">	t[root&lt;&lt;<span class="number">1</span>][bit].s=(len-(len&gt;&gt;<span class="number">1</span>))-t[root&lt;&lt;<span class="number">1</span>][bit].s;</span><br><span class="line">	t[root&lt;&lt;<span class="number">1</span>|<span class="number">1</span>][bit].s=(len&gt;&gt;<span class="number">1</span>)-t[root&lt;&lt;<span class="number">1</span>|<span class="number">1</span>][bit].s;</span><br><span class="line">	t[root&lt;&lt;<span class="number">1</span>][bit].Xor^=<span class="number">1</span>,t[root&lt;&lt;<span class="number">1</span>|<span class="number">1</span>][bit].Xor^=<span class="number">1</span>;</span><br><span class="line">	t[root][bit].Xor=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pushup</span><span class="params">(<span class="keyword">int</span> root,<span class="keyword">int</span> bit)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	t[root][bit].s=t[root&lt;&lt;<span class="number">1</span>][bit].s+t[root&lt;&lt;<span class="number">1</span>|<span class="number">1</span>][bit].s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> root,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> ll,<span class="keyword">int</span> rr,<span class="keyword">int</span> bit)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(ll&lt;=l&amp;&amp;r&lt;=rr)</span><br><span class="line">	&#123;</span><br><span class="line">		t[root][bit].Xor^=<span class="number">1</span>;</span><br><span class="line">		t[root][bit].s=(r-l+<span class="number">1</span>)-t[root][bit].s;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	pushdown(root,r-l+<span class="number">1</span>,bit);</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(ll&lt;=mid) change(root&lt;&lt;<span class="number">1</span>,l,mid,ll,rr,bit);</span><br><span class="line">	<span class="keyword">if</span>(rr&gt;mid) change(root&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r,ll,rr,bit);</span><br><span class="line">	pushup(root,bit);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> root,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> ll,<span class="keyword">int</span> rr,<span class="keyword">int</span> bit)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(ll&lt;=l&amp;&amp;r&lt;=rr) <span class="keyword">return</span> t[root][bit].s;</span><br><span class="line">	pushdown(root,r-l+<span class="number">1</span>,bit);</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>,tot=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(ll&lt;=mid) tot+=query(root&lt;&lt;<span class="number">1</span>,l,mid,ll,rr,bit);</span><br><span class="line">	<span class="keyword">if</span>(rr&gt;mid) tot+=query(root&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r,ll,rr,bit);</span><br><span class="line">	<span class="keyword">return</span> tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n=read();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> x=read();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=<span class="number">20</span>;++j)</span><br><span class="line">			<span class="keyword">if</span>((<span class="number">1</span>&lt;&lt;j)&amp;x) change(<span class="number">1</span>,<span class="number">1</span>,n,i,i,j);</span><br><span class="line">	&#125;</span><br><span class="line">	m=read();</span><br><span class="line">	<span class="keyword">while</span>(m--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> type=read();</span><br><span class="line">		<span class="keyword">if</span>(type==<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">int</span> l=read(),r=read();</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">20</span>;~i;--i)</span><br><span class="line">				ans=(ans&lt;&lt;<span class="number">1</span>)+query(<span class="number">1</span>,<span class="number">1</span>,n,l,r,i);</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> l=read(),r=read(),x=read();</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">20</span>;++i)</span><br><span class="line">				<span class="keyword">if</span>((<span class="number">1</span>&lt;&lt;i)&amp;x) change(<span class="number">1</span>,<span class="number">1</span>,n,l,r,i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -457,8 +501,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2099/12/31/蒟蒻报道/" rel="prev" title="<font color=#ff00ff>蒟蒻⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄报道</font><font color=#0099ff>　　　(置</font><font color=#00ff00>顶)</font><font color=#ff0000>(置</font><font color=#ff9900>顶)</font>">
-                <font color="#ff00ff">蒟蒻⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄报道</font><font color="#0099ff">　　　(置</font><font color="#00ff00">顶)</font><font color="#ff0000">(置</font><font color="#ff9900">顶)</font> <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/15/HDU-1024-Max-Sum-Plus-Plus/" rel="prev" title="HDU 1024 Max Sum Plus Plus">
+                HDU 1024 Max Sum Plus Plus <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -538,7 +582,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -630,7 +674,7 @@
           
           
           <div id="music163player">
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="106" src="//music.163.com/outchain/player?type=2&id=1332052297&auto=1&height=66"></iframe>
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="106" src="//music.163.com/outchain/player?type=2&id=1332052297&auto=0&height=66"></iframe>
           </div>
           
 
@@ -647,7 +691,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#E-XOR-on-Segment"><span class="nav-number"></span> <span class="nav-text">E.XOR on Segment</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li></ol></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-XOR-on-Segment"><span class="nav-number"></span> <span class="nav-text">A.XOR on Segment</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#简要翻译"><span class="nav-number">2.</span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Input"><span class="nav-number">3.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Output"><span class="nav-number">4.</span> <span class="nav-text">Output</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#请不要使用”-lld​-”去读入或输出-long-long​-；"><span class="nav-number"></span> <span class="nav-text">请不要使用”$\%lld​$”去读入或输出$long\ long​$；</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#你最好使用”-cin​-cout​-”或者”-I64d​-”。"><span class="nav-number"></span> <span class="nav-text">你最好使用”$cin​$,$cout​$”或者”$\%I64d​$”。</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input-1"><span class="nav-number">1.</span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output-1"><span class="nav-number">2.</span> <span class="nav-text">Sample Output 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input-2"><span class="nav-number">3.</span> <span class="nav-text">Sample Input 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output-2"><span class="nav-number">4.</span> <span class="nav-text">Sample Output 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Hint"><span class="nav-number">5.</span> <span class="nav-text">Hint</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></li></div>
             
 
           </div>
@@ -719,7 +763,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共14.9k字</span>
+  <span class="post-count">博客全站共12.6k字</span>
 </div>
         
 
@@ -1224,7 +1268,7 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tamamo.model.json"},"display":{"position":"left","width":110,"height":280,"superSample":2,"hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"live2d-widget-model-tamamo"},"display":{"position":"left","width":110,"height":280,"superSample":2,"hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/clicklove.js"></script>
