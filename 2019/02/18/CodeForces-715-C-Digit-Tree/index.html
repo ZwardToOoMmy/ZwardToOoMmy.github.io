@@ -97,7 +97,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/02/18/CodeForces-715-C-Digit-Tree/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/02/18/CodeForces-715-C-Digit-Tree/2.png">
-<meta property="og:updated_time" content="2019-02-18T10:53:23.754Z">
+<meta property="og:updated_time" content="2019-02-18T11:03:24.388Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CodeForces#715 C.Digit Tree">
 <meta name="twitter:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题E.Digit Tree题面ZS the Coder has a large tree. It can be represented as an undirected connected graph of $n$ vertices numbered from $0$ to $n - 1$ and $">
@@ -436,12 +436,12 @@
 <p>在第二个例子中，所求数对是$(4,0),(0,4),(3,2),(2,3),(0,1),(1,0),(4,1),(1,4)$，其中6对给出了数字$33$而其中$2$对给出了数字$3333$，它们都是$11​$的倍数。</p>
 <p><img src="/2019/02/18/CodeForces-715-C-Digit-Tree/2.png" alt="img"></p>
 <hr>
-<p>我们<a href="">点分治</a>套路一波。</p>
+<p>我们<a href="https://www.luogu.org/blog/user9012/dian-fen-zhi-lve-xie" target="_blank" rel="noopener">点分治</a>套路一波。</p>
 <p>然后分析一下如何统计答案。</p>
 <p>对于$x→y$的路径，等价于$x→root→y$，我们要处理出$dis[x]$和$dis[y]$分别表示$x$到$root$,$root$到$y$连成的数对$mod$取模后的结果。</p>
 <p>在合并时，我们知道，如果路径是合法的，那么肯定满足$dis[x]×10^{deep[y]}+dis[y]≡0\ \pmod{M}​$</p>
 <p>也就是$dis[x]≡-dis[y]×10^{-deep[y]}\pmod{M}$</p>
-<p>用$dfs$来统计答案即可。</p>
+<p>用$dfs​$来统计答案即可。</p>
 <hr>
 <h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -761,7 +761,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共26.8k字</span>
+  <span class="post-count">博客全站共26.9k字</span>
 </div>
         
 
