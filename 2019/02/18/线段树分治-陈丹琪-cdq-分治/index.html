@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="我们先来了解一下线段树分治很显然，我们在进行操作的时候，把所有操作都放在一棵树里面，就像遍历一棵树一样遍历一整棵树，这个算法与回溯+$dfs$不同的地方在于一层递归中有可能横跨多个节点。如果一个操作需要用到多个节点，那么就把这个操作拆开，分治这个操作，最多能分成$log$级别数量的操作。 模仿线段树，将这个操作覆盖整个区间，然后进行拆分操作，递归子树求解。 例题—BZOJ4025二分图  我们再了">
+<meta name="description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~我们先来了解一下线段树分治很显然，我们在进行操作的时候，把所有操作都放在一棵树里面，就像遍历一棵树一样遍历一整棵树，这个算法与回溯+$dfs$不同的地方在于一层递归中有可能横跨多个节点。如果一个操作需要用到多个节点，那么就把这个操作拆开，分治这个操作，最多能分成$log$级别数量的操作。 模仿线段树，将这个操作覆盖整">
 <meta name="keywords" content="Operation On Tree">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线段树分治-陈丹琪(cdq)分治">
 <meta property="og:url" content="http://yoursite.com/2019/02/18/线段树分治-陈丹琪-cdq-分治/index.html">
 <meta property="og:site_name" content="ZT&#39;s Blog">
-<meta property="og:description" content="我们先来了解一下线段树分治很显然，我们在进行操作的时候，把所有操作都放在一棵树里面，就像遍历一棵树一样遍历一整棵树，这个算法与回溯+$dfs$不同的地方在于一层递归中有可能横跨多个节点。如果一个操作需要用到多个节点，那么就把这个操作拆开，分治这个操作，最多能分成$log$级别数量的操作。 模仿线段树，将这个操作覆盖整个区间，然后进行拆分操作，递归子树求解。 例题—BZOJ4025二分图  我们再了">
+<meta property="og:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~我们先来了解一下线段树分治很显然，我们在进行操作的时候，把所有操作都放在一棵树里面，就像遍历一棵树一样遍历一整棵树，这个算法与回溯+$dfs$不同的地方在于一层递归中有可能横跨多个节点。如果一个操作需要用到多个节点，那么就把这个操作拆开，分治这个操作，最多能分成$log$级别数量的操作。 模仿线段树，将这个操作覆盖整">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-18T11:43:12.692Z">
+<meta property="og:updated_time" content="2019-02-18T12:11:36.469Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线段树分治-陈丹琪(cdq)分治">
-<meta name="twitter:description" content="我们先来了解一下线段树分治很显然，我们在进行操作的时候，把所有操作都放在一棵树里面，就像遍历一棵树一样遍历一整棵树，这个算法与回溯+$dfs$不同的地方在于一层递归中有可能横跨多个节点。如果一个操作需要用到多个节点，那么就把这个操作拆开，分治这个操作，最多能分成$log$级别数量的操作。 模仿线段树，将这个操作覆盖整个区间，然后进行拆分操作，递归子树求解。 例题—BZOJ4025二分图  我们再了">
+<meta name="twitter:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~我们先来了解一下线段树分治很显然，我们在进行操作的时候，把所有操作都放在一棵树里面，就像遍历一棵树一样遍历一整棵树，这个算法与回溯+$dfs$不同的地方在于一层递归中有可能横跨多个节点。如果一个操作需要用到多个节点，那么就把这个操作拆开，分治这个操作，最多能分成$log$级别数量的操作。 模仿线段树，将这个操作覆盖整">
 
 
 
@@ -398,7 +398,7 @@
       
 
       
-        <h3 id="我们先来了解一下线段树分治"><a href="#我们先来了解一下线段树分治" class="headerlink" title="我们先来了解一下线段树分治"></a>我们先来了解一下线段树分治</h3><p>很显然，我们在进行操作的时候，把所有操作都放在一棵树里面，就像遍历一棵树一样遍历一整棵树，这个算法与回溯+$dfs$不同的地方在于一层递归中有可能横跨多个节点。如果一个操作需要用到多个节点，那么就把这个操作拆开，分治这个操作，最多能分成$log$级别数量的操作。</p>
+        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="我们先来了解一下线段树分治"><a href="#我们先来了解一下线段树分治" class="headerlink" title="我们先来了解一下线段树分治"></a>我们先来了解一下线段树分治</h3><p>很显然，我们在进行操作的时候，把所有操作都放在一棵树里面，就像遍历一棵树一样遍历一整棵树，这个算法与回溯+$dfs$不同的地方在于一层递归中有可能横跨多个节点。如果一个操作需要用到多个节点，那么就把这个操作拆开，分治这个操作，最多能分成$log$级别数量的操作。</p>
 <p>模仿线段树，将这个操作覆盖整个区间，然后进行拆分操作，递归子树求解。</p>
 <p><del><a href="https://zwardtooommy.github.io/2019/02/18/bzoj-4025-%E4%BA%8C%E5%88%86%E5%9B%BE/" target="_blank" rel="noopener">例题—BZOJ4025二分图</a></del></p>
 <hr>
@@ -651,7 +651,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#我们先来了解一下线段树分治"><span class="nav-number">1.</span> <span class="nav-text">我们先来了解一下线段树分治</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我们再了解一下CDQ分治"><span class="nav-number">2.</span> <span class="nav-text">我们再了解一下CDQ分治</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CDQ分治"><span class="nav-number">2.1.</span> <span class="nav-text">CDQ分治</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二维偏序"><span class="nav-number">2.2.</span> <span class="nav-text">二维偏序</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#我们先来了解一下线段树分治"><span class="nav-number"></span> <span class="nav-text">我们先来了解一下线段树分治</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我们再了解一下CDQ分治"><span class="nav-number"></span> <span class="nav-text">我们再了解一下CDQ分治</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CDQ分治"><span class="nav-number"></span> <span class="nav-text">CDQ分治</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二维偏序"><span class="nav-number"></span> <span class="nav-text">二维偏序</span></a></li></ol></li></div>
             
 
           </div>
