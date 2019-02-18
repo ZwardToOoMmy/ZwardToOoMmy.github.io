@@ -1910,7 +1910,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e5e5ff;
+  background: #ffff1b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2804,4 +2804,12 @@ body pre span.meta-string {
 }
 body {
   background: url("https://zwardtooommy.github.io/2019/02/14/image/back.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.main-inner {
+  background: #fff;
+  opacity: 0.8;
 }
