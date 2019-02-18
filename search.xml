@@ -9,6 +9,44 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[曼哈顿距离-欧式距离]]></title>
+    <url>%2F2019%2F02%2F18%2F%E6%9B%BC%E5%93%88%E9%A1%BF%E8%B7%9D%E7%A6%BB-%E6%AC%A7%E5%BC%8F%E8%B7%9D%E7%A6%BB%2F</url>
+    <content type="text"><![CDATA[~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~ 1、曼哈顿距离又叫马氏距离。 简单来说就是点与点之间在$n$维空间上的坐标差的绝对值。 以二维平面为例子：则$Manhattan\ distance=|x_1-x_2|+|y_1-y_2|$。 2、欧式距离又叫欧几里得距离。 简单来说就是点与点在空间上的直线距离。 以二维平面为例子：则$Euclidean\ Metric=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$。 度娘百科里有这么一个图。 那么绿色代表欧式距离，蓝、红、黄其实求出的都是曼哈顿距离。]]></content>
+      <categories>
+        <category>知识点</category>
+      </categories>
+      <tags>
+        <tag>Math Knowledge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[线段树分治-陈丹琪(cdq)分治]]></title>
+    <url>%2F2019%2F02%2F18%2F%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%88%86%E6%B2%BB-%E9%99%88%E4%B8%B9%E7%90%AA-cdq-%E5%88%86%E6%B2%BB%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[启发式合并]]></title>
+    <url>%2F2019%2F02%2F18%2F%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6%2F</url>
+    <content type="text"><![CDATA[~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~一、启发式合并的算法原理我们常用路径压缩的方法来减少内存消耗，但是过程中会损失掉很多的数据信息，如果用冰茶几来维护又会消耗很多时间，这时候我们需要用到启发式合并。 我们用并查集时，很多时间都浪费在了$getfa()$这个函数上面，我们考虑对$getfa()$进行优化。启发式合并使它的时间复杂度能尽可能控制在$O(logn)$左右。 并查集是树型的数据结构，有深度这一概念，如果我们把深度大的树的根节点接在深度小的树上，那么深度反而会增大，时间消耗就会更多。 那启发式合并就是把小的树的根节点接在大的树上，那么深度就是$max(h_小+1,h_大)$，这就是启发式合并的原理。 二、我们借图来理解一下。 一开始有两棵树高度分别为3和5 如果是并查集的$getfa()$操作，那么树会变成这样 而进行了启发式合并的树是这样的 三、Code12345678910111213void qfs_union(int x,int y)&#123; int a=find(x); int b=find(y); if(height[a]&gt;height[b]) fa[b]=a; else if(height[a]&lt;height[b]) fa[a]=b; else&#123; fa[a]=b; height[b]++; &#125;&#125; 123456int find(x)&#123; while(fa[x]!=0) x=fa[x]; return x;&#125;]]></content>
+      <categories>
+        <category>知识点</category>
+      </categories>
+      <tags>
+        <tag>Operation On Tree</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[二分图专题]]></title>
+    <url>%2F2019%2F02%2F18%2F%E4%BA%8C%E5%88%86%E5%9B%BE%E4%B8%93%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[我对二分图简直自闭，决定再次学习一波，唉。]]></content>
+      <categories>
+        <category>知识点</category>
+      </categories>
+      <tags>
+        <tag>2-SAT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CodeForces#323 C.Two permutations]]></title>
     <url>%2F2019%2F02%2F17%2FCodeForces-323-C-Two-permutations%2F</url>
     <content type="text"><![CDATA[~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题B.Two Permutations题面这次我不想搬英文题面了，我懒一次吧，毕竟是fateice大佬给的翻译 简要翻译给你两个长度为n的排列，多次询问在第一个排列的[l1,r1]和第二个排列的[l2,r2]同时出现的数有多少个。 Input第一行包含一个整数$n$，即两个排列中的元素数。下一行包含$n$个整数，用空格分隔: $p_1, p_2 … p_n$ ，代表序列$1$。下一行包含$n$个整数，用空格分隔:$q_1,q_2…q_n$，代表序列$2$。 下面一行包含一个整数$m$，代表询问的次数。 下面的m行包含一行查询的描述。第i个询问的描述由4个整数组成:$a,b,c, d$。查询参数$l_1、r_1、1_2、r_2$由数字$a,b,c,d$通过以下算法得到 引入变量$x$。如果它是第一个查询，那么变量$x=0$，否则它等于前一个查询的值加上$1$。 引入函数$f(z) =((z-1+c)\ mod\ n)+1$。 假设$l_1 = min (f (a), f (b)), r_1 = max(f (a), f (b)), l_2 = min (f (c), f (d)), r_2=max(f (c), f (d))$ Output对于每个查询输出一行一个整数代表答案。 Sample Input 133 1 23 2 111 2 3 3 Sample Output 11 Sample Input 244 3 2 12 3 4 131 2 3 41 3 2 11 4 2 3 Sample Output 21 1 2 Hint$1\le n\le 10^6$，$1 \le m \le 2×10^5$。 $1\le p_i\le n$，$1\le a,b,c,d\le n$。 我们求出第二个排列的数在第一个排列中所对应的位置。 用可持久化的权值线段树来维护。 时间复杂度$O(mlogm)$ Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#include&lt;bits/stdc++.h&gt;using namespace std;int read()&#123; int x = 0, w = 0; char ch = 0; while (!isdigit(ch)) &#123;w |= ch == '-'; ch = getchar();&#125; while (isdigit(ch)) &#123;x = (x &lt;&lt; 3) + (x &lt;&lt; 1) + ch - '0'; ch = getchar();&#125; return w ? -x : x;&#125;const int N=1e6+10;const int M=2e5+10;struct seg_tree&#123; int l,r; int s;&#125;t[N*22];int rot[M&lt;&lt;4],cnt,n,q,answer,pos[M&lt;&lt;4],a[M&lt;&lt;4];void insert(int &amp;root,int l,int r,int posi,int last)&#123; root=++cnt; t[root].l=t[last].l,t[root].r=t[last].r; t[root].s=t[last].s+1; if(l==r) return; int mid=l+r&gt;&gt;1; if(posi&lt;=mid) insert(t[root].l,l,mid,posi,t[last].l); if(posi&gt;mid) insert(t[root].r,mid+1,r,posi,t[last].r);&#125;int query(int root,int l,int r,int ll,int rr)&#123; if(ll&lt;=l&amp;&amp;r&lt;=rr) return t[root].s; int mid=l+r&gt;&gt;1,A=0; if(ll&lt;=mid) A+=query(t[root].l,l,mid,ll,rr); if(rr&gt;mid) A+=query(t[root].r,mid+1,r,ll,rr); return A;&#125;int get_read()&#123; return (read()+answer-1)%n+1;&#125;int main(int argc, char const *argv[])&#123; n=read(); for(register int i=1,x;i&lt;=n;++i) x=read(),pos[x]=i; for(register int i=1,x;i&lt;=n;++i) x=read(),a[i]=pos[x]; for(register int i=1;i&lt;=n;++i) insert(rot[i],1,n,a[i],rot[i-1]); q=read(); while(q--) &#123; int A=get_read(),B=get_read(),C=get_read(),D=get_read(); if(A&gt;B) swap(A,B); if(C&gt;D) swap(C,D); printf("%d\n",answer=query(rot[D],1,n,A,B)-query(rot[C-1],1,n,A,B)); ++answer; &#125; return 0;&#125;]]></content>
