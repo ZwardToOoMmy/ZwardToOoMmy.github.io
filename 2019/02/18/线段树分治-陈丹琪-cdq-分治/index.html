@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Operation On Tree,">
 
 
 
@@ -87,14 +87,18 @@
 
 
 
+<meta name="description" content="我们先来了解一下线段树分治很显然，我们在进行操作的时候，把所有操作都放在一棵树里面，就像遍历一棵树一样遍历一整棵树，这个算法与回溯+$dfs$不同的地方在于一层递归中有可能横跨多个节点。如果一个操作需要用到多个节点，那么就把这个操作拆开，分治这个操作，最多能分成$log$级别数量的操作。 模仿线段树，将这个操作覆盖整个区间，然后进行拆分操作，递归子树求解。 例题—BZOJ4025二分图  我们再了">
+<meta name="keywords" content="Operation On Tree">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线段树分治-陈丹琪(cdq)分治">
 <meta property="og:url" content="http://yoursite.com/2019/02/18/线段树分治-陈丹琪-cdq-分治/index.html">
 <meta property="og:site_name" content="ZT&#39;s Blog">
+<meta property="og:description" content="我们先来了解一下线段树分治很显然，我们在进行操作的时候，把所有操作都放在一棵树里面，就像遍历一棵树一样遍历一整棵树，这个算法与回溯+$dfs$不同的地方在于一层递归中有可能横跨多个节点。如果一个操作需要用到多个节点，那么就把这个操作拆开，分治这个操作，最多能分成$log$级别数量的操作。 模仿线段树，将这个操作覆盖整个区间，然后进行拆分操作，递归子树求解。 例题—BZOJ4025二分图  我们再了">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-18T01:43:34.810Z">
+<meta property="og:updated_time" content="2019-02-18T11:43:12.692Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线段树分治-陈丹琪(cdq)分治">
+<meta name="twitter:description" content="我们先来了解一下线段树分治很显然，我们在进行操作的时候，把所有操作都放在一棵树里面，就像遍历一棵树一样遍历一整棵树，这个算法与回溯+$dfs$不同的地方在于一层递归中有可能横跨多个节点。如果一个操作需要用到多个节点，那么就把这个操作拆开，分治这个操作，最多能分成$log$级别数量的操作。 模仿线段树，将这个操作覆盖整个区间，然后进行拆分操作，递归子树求解。 例题—BZOJ4025二分图  我们再了">
 
 
 
@@ -339,6 +343,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/知识点/" itemprop="url" rel="index">
+                    <span itemprop="name">知识点</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -372,7 +398,15 @@
       
 
       
-        
+        <h3 id="我们先来了解一下线段树分治"><a href="#我们先来了解一下线段树分治" class="headerlink" title="我们先来了解一下线段树分治"></a>我们先来了解一下线段树分治</h3><p>很显然，我们在进行操作的时候，把所有操作都放在一棵树里面，就像遍历一棵树一样遍历一整棵树，这个算法与回溯+$dfs$不同的地方在于一层递归中有可能横跨多个节点。如果一个操作需要用到多个节点，那么就把这个操作拆开，分治这个操作，最多能分成$log$级别数量的操作。</p>
+<p>模仿线段树，将这个操作覆盖整个区间，然后进行拆分操作，递归子树求解。</p>
+<p><del><a href="https://zwardtooommy.github.io/2019/02/18/bzoj-4025-%E4%BA%8C%E5%88%86%E5%9B%BE/" target="_blank" rel="noopener">例题—BZOJ4025二分图</a></del></p>
+<hr>
+<h3 id="我们再了解一下CDQ分治"><a href="#我们再了解一下CDQ分治" class="headerlink" title="我们再了解一下CDQ分治"></a>我们再了解一下CDQ分治</h3><h4 id="CDQ分治"><a href="#CDQ分治" class="headerlink" title="CDQ分治"></a>CDQ分治</h4><p>它只支持离线操作，但是它的常数比较小，能替代一部分比较复杂的数据结构。</p>
+<h4 id="二维偏序"><a href="#二维偏序" class="headerlink" title="二维偏序"></a>二维偏序</h4><p><del>（CDQ分治太烦了，学习中……）</del></p>
+<p>更多详情请点击<a href="https://blog.csdn.net/wu_tongtong/article/details/78785836" target="_blank" rel="noopener">Coco_T_大佬的blog</a>。</p>
+<hr>
+
       
     </div>
     
@@ -395,6 +429,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Operation-On-Tree/" rel="tag"># Operation On Tree</a>
+          
+        </div>
       
 
       
@@ -469,8 +509,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -593,6 +642,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#我们先来了解一下线段树分治"><span class="nav-number">1.</span> <span class="nav-text">我们先来了解一下线段树分治</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我们再了解一下CDQ分治"><span class="nav-number">2.</span> <span class="nav-text">我们再了解一下CDQ分治</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CDQ分治"><span class="nav-number">2.1.</span> <span class="nav-text">CDQ分治</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二维偏序"><span class="nav-number">2.2.</span> <span class="nav-text">二维偏序</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -658,7 +723,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共26.9k字</span>
+  <span class="post-count">博客全站共27.1k字</span>
 </div>
         
 
