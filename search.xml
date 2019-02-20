@@ -9,6 +9,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[点分治(淀粉质)]]></title>
+    <url>%2F2019%2F02%2F20%2F%E7%82%B9%E5%88%86%E6%B2%BB-%E6%B7%80%E7%B2%89%E8%B4%A8%2F</url>
+    <content type="text"><![CDATA[~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~(淀粉质)点分治推荐一道模板题。 我们选择任意一个根$root​$，将树变为一棵无根树。 那么我们对于树上任意两个点之间的路径必定被转化为经过$root$的路径，或是位于$root$某一棵子树中的路径。 所以我们就能够把一条路径分到几棵子树中分治求解。点分治后，每一层分别对$n$个点处理一次，递归$k$层的复杂度为$O(kn)$。 不过当树变为一条链之后，最坏的情况是当$root$取首尾节点时，有$k=n$，时间复杂度为$O(n^2)$。 那么我们选择$root​$时应该怎么选择呢？ 树的重心是个好的选择，它能使递归的层数减到最少。 我们记录每个点$i$到根节点$root$的距离$dis_i$，那么从$u$到$v$的路径长度为$dis_u+dis_v$。 同时设$max_part[i]$表示删除$i$节点后，最大的子树的大小。 树的重心节点$g$一定是$max_part[g]=(max_part[i])_{min}$。 取重心也就保证了时间复杂度稳定在$O(nlogn)$左右。 是不是比原来O(n^2)的算法优秀了很多呢？]]></content>
+      <categories>
+        <category>知识点</category>
+      </categories>
+      <tags>
+        <tag>Operation On Tree</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2019.2.19寒假集训-元宵爆零赛]]></title>
     <url>%2F2019%2F02%2F19%2F2019-2-19%E5%AF%92%E5%81%87%E9%9B%86%E8%AE%AD-%E5%85%83%E5%AE%B5%E7%88%86%E9%9B%B6%E8%B5%9B%2F</url>
     <content type="text"><![CDATA[~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~恭喜您获得ysy大爷的毒瘤题一套 恭喜您获得爆零的好成绩 题解tree： 首先不难发现，如果某一步是朝着t走的，那么一定不会走回来了；否则，一定会把整棵子树走完再回到当前点。 走到一个$s$到$t$路径上的点时，会随机选择一个儿子走下去，这等价于随机一个儿子们的排列，然后按这个顺序走。 那么$s$到$t$的路径上所有点显然一定会走到，以$s$为根时$t$子树中的点显然走不到，而其它点都有$\frac 12$的概率会走到。 时间复杂度$O(nlogn+m)$。 prime： $n$较小时，我们可以直接用线性筛/埃氏筛法求出每个数的最小质因数。 我们考虑进行容斥。对于每个质数$x$，我们需要求出$1$~$n/x$中不被比$x$小的质数整除的数的个数。一种简单的思路是，对于x&lt;=k的情况，我们进行常见的枚举子集容斥；对于$x&gt;k$的情况，$n/x$较小，我们就在$n/k$的范围内进行线性筛/埃氏筛法。 注意到进行子集容斥时，枚举子集后贡献形如$(-1)^i(n/S)$，而$n/S$只有$O(\sqrt n)$种取值，我们可以对这个进行记忆化。 时间复杂度$O(\frac{n^\frac34}{\sqrt {logn}})$ path： 这是课件里的例题。 点分治统计树上的情况，然后单独考虑经过剩下那条边的答案。 在环上按顺序枚举一个端点，用树状数组维护另一个端点到这条边的距离。 时间复杂度$O(nlogn)$。 以上是闫书弈大佬的题解 我的丑陋的代码(✿◡‿◡)：Tree: 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869#include&lt;bits/stdc++.h&gt;using namespace std;int read()&#123; int x = 0, w = 0; char ch = 0; while (!isdigit(ch)) &#123;w |= ch == '-'; ch = getchar();&#125; while (isdigit(ch)) &#123;x = (x &lt;&lt; 3) + (x &lt;&lt; 1) + ch - '0'; ch = getchar();&#125; return w ? -x : x;&#125;int a[500010], n, m, deep[500010], f[21][500010];vector&lt;int&gt; v[500010];int point;void dfs(int x)&#123; for (int i = 1; i &lt;= 20; ++i) f[i][x] = f[i - 1][f[i - 1][x]]; a[x] = 1; for (int i = 0; i &lt; v[x].size(); ++i) if (v[x][i] != f[0][x]) &#123; f[0][v[x][i]] = x; deep[v[x][i]] = deep[x] + 1; dfs(v[x][i]); a[x] += a[v[x][i]]; &#125;&#125;int LCA(int x, int y)&#123; if (deep[x] &lt; deep[y]) swap(x, y); if (deep[x] &gt; deep[y]) &#123; for (int i = 20; ~i; --i) if (deep[x] - (1 &lt;&lt; i) &gt; deep[y]) x = f[i][x]; if (f[0][x] == y) &#123; point = x; return y; &#125; x = f[0][x]; &#125; for (int i = 20; ~i; --i) if (f[i][x] != f[i][y]) x = f[i][x], y = f[i][y]; return f[0][x];&#125;int main(int argc, char const *argv[])&#123; freopen("tree.in", "r", stdin); freopen("tree.out", "w", stdout); n = read(), m = read(); for (int i = 1; i &lt; n; ++i) &#123; int from = read(), to = read(); v[from].push_back(to); v[to].push_back(from); &#125; deep[1] = 1; dfs(1); while (m--) &#123; int s = read(), t = read(), g, k; int lca = LCA(s, t); if (lca == t) k = n - a[point] - 1; else k = a[t] - 1; g = n + (deep[s] + deep[t] - 2 * deep[lca] + 1) - k; printf("%d.%d\n", g / 2, g % 2 * 5); &#125; return 0;&#125; Prime: 12 Path: 12]]></content>
