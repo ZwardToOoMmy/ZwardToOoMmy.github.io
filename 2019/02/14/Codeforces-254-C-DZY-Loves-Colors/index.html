@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="ZT&#39;s Blog">
 <meta property="og:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题F.DZY Loves Colors题面$DZY$ loves colors, and he enjoys painting. On a colorful day, $DZY$ gets a colorful ribbon, which consists of $n$ units (they are">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-15T05:53:34.565Z">
+<meta property="og:updated_time" content="2019-02-24T13:25:52.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CodeForces#254 C.DZY Loves Colors">
 <meta name="twitter:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题F.DZY Loves Colors题面$DZY$ loves colors, and he enjoys painting. On a colorful day, $DZY$ gets a colorful ribbon, which consists of $n$ units (they are">
@@ -398,7 +398,7 @@
       
 
       
-        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="F-DZY-Loves-Colors"><a href="#F-DZY-Loves-Colors" class="headerlink" title="F.DZY Loves Colors"></a>F.DZY Loves Colors</h4><h6 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h6><p>$DZY$ loves colors, and he enjoys painting.</p>
+        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="F-DZY-Loves-Colors"><a href="#F-DZY-Loves-Colors" class="headerlink" title="F.DZY Loves Colors"></a>F.DZY Loves Colors</h4><h5 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h5><p>$DZY$ loves colors, and he enjoys painting.</p>
 <p>On a colorful day, $DZY$ gets a colorful ribbon, which consists of $n$ units (they are numbered from $1$ to $n$ from left to right). The color of the $i$-th unit of the ribbon is $i$ at first. It is colorful enough, but we still consider that the colorfulness of each unit is $0​$ at first.</p>
 <p>$DZY$ loves painting, we know. He takes up a paintbrush with color $x$ and uses it to draw a line on the ribbon. In such a case some contiguous units are painted. Imagine that the color of unit $i$ currently is $y$. When it is painted by this paintbrush, the color of the unit becomes $x$, and the colorfulness of the unit increases by $|x - y|$.</p>
 <p>$DZY$ wants to perform $m$ operations, each operation can be one of the following:</p>
@@ -408,35 +408,35 @@
 </ol>
 <p>Can you help $DZY$?</p>
 <hr>
-<h6 id="简要翻译"><a href="#简要翻译" class="headerlink" title="简要翻译"></a>简要翻译</h6><p>$DZY$喜欢色彩，他热爱绘画。</p>
+<h5 id="简要翻译"><a href="#简要翻译" class="headerlink" title="简要翻译"></a>简要翻译</h5><p>$DZY$喜欢色彩，他热爱绘画。</p>
 <p>在一个多姿多彩的日子里，$DZY$得到了一个彩色的缎带，它由$N$个单元组成（从左到右从$1$到$n$编号）。色带的第$i$个单位的最初颜色是$i$。虽然颜色足够丰富，但我们仍然认为每个单元的颜色数量最初是$0$。</p>
 <p>$DZY$热衷于绘画，我们知道。他拿起一把彩色$X$笔，用它在缎带上画一条线。在这种情况下，他就绘制了一段连续的单元。想象一下，单位$i$被涂之前颜色是$Y$。被涂之后时，单元的颜色变为$X$，令单位的颜色增加了 $∣X−Y∣$。 $DZY$想要执行$M$个操作，每个操作可以是下列操作之一：</p>
 <p>$1$、将区间 [$L,R$] 内单元绘制为颜色$X$。</p>
 <p>$2$、询问 [$L,R$] 之间的单位颜色的总和（包括两者）。</p>
 <p>你能帮助$DZY$吗？ </p>
 <hr>
-<h6 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h6><p>第一行包含两个整数$n,m$。</p>
+<h5 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h5><p>第一行包含两个整数$n,m$。</p>
 <p>下面$m$行中每一行以一个整数$type$开头，表示操作类型。</p>
 <p>若$type=1$，那么该行接下来有3个整数$L,R,X$，描述操作$1$；</p>
 <p>若$type=2$，那么该行接下来有2个整数$L,R$，描述操作$2$。</p>
 <hr>
-<h6 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h6><p>对于每个操作$2$，输出一行，包含着色数量之和。</p>
+<h5 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h5><p>对于每个操作$2$，输出一行，包含着色数量之和。</p>
 <hr>
-<h6 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h6><p>3 3<br>1 1 2 4<br>1 2 3 5<br>2 1 3</p>
+<h5 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h5><p>3 3<br>1 1 2 4<br>1 2 3 5<br>2 1 3</p>
 <hr>
-<h6 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h6><p>8</p>
+<h5 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h5><p>8</p>
 <hr>
-<h6 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2"></a>Sample Input 2</h6><p>3 4<br>1 1 3 4<br>2 1 1<br>2 2 2<br>2 3 3</p>
+<h5 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2"></a>Sample Input 2</h5><p>3 4<br>1 1 3 4<br>2 1 1<br>2 2 2<br>2 3 3</p>
 <hr>
-<h6 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2"></a>Sample Output 2</h6><p>3</p>
+<h5 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2"></a>Sample Output 2</h5><p>3</p>
 <p>2</p>
 <p>1</p>
 <hr>
-<h6 id="Sample-Input-3"><a href="#Sample-Input-3" class="headerlink" title="Sample Input 3"></a>Sample Input 3</h6><p>10 6<br>1 1 5 3<br>1 2 7 9<br>1 10 10 11<br>1 3 8 12<br>1 1 10 3<br>2 1 10</p>
+<h5 id="Sample-Input-3"><a href="#Sample-Input-3" class="headerlink" title="Sample Input 3"></a>Sample Input 3</h5><p>10 6<br>1 1 5 3<br>1 2 7 9<br>1 10 10 11<br>1 3 8 12<br>1 1 10 3<br>2 1 10</p>
 <hr>
-<h6 id="Sample-Output-3"><a href="#Sample-Output-3" class="headerlink" title="Sample Output 3"></a>Sample Output 3</h6><p>129</p>
+<h5 id="Sample-Output-3"><a href="#Sample-Output-3" class="headerlink" title="Sample Output 3"></a>Sample Output 3</h5><p>129</p>
 <hr>
-<h6 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h6><p>$1\leq n,m,\leq 10^5$</p>
+<h5 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h5><p>$1\leq n,m,\leq 10^5$</p>
 <p>$1\leq type\leq 2$</p>
 <p>$1\leq l\leq r\leq n$，$1\leq x\leq 10^8$。</p>
 <hr>
@@ -694,7 +694,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#F-DZY-Loves-Colors"><span class="nav-number"></span> <span class="nav-text">F.DZY Loves Colors</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#简要翻译"><span class="nav-number">2.</span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Input"><span class="nav-number">3.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Output"><span class="nav-number">4.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input-1"><span class="nav-number">5.</span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output-1"><span class="nav-number">6.</span> <span class="nav-text">Sample Output 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input-2"><span class="nav-number">7.</span> <span class="nav-text">Sample Input 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output-2"><span class="nav-number">8.</span> <span class="nav-text">Sample Output 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input-3"><span class="nav-number">9.</span> <span class="nav-text">Sample Input 3</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output-3"><span class="nav-number">10.</span> <span class="nav-text">Sample Output 3</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Hint"><span class="nav-number">11.</span> <span class="nav-text">Hint</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#F-DZY-Loves-Colors"><span class="nav-number"></span> <span class="nav-text">F.DZY Loves Colors</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题面"><span class="nav-number"></span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#简要翻译"><span class="nav-number"></span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Input"><span class="nav-number"></span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Output"><span class="nav-number"></span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Input-1"><span class="nav-number"></span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Output-1"><span class="nav-number"></span> <span class="nav-text">Sample Output 1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Input-2"><span class="nav-number"></span> <span class="nav-text">Sample Input 2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Output-2"><span class="nav-number"></span> <span class="nav-text">Sample Output 2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Input-3"><span class="nav-number"></span> <span class="nav-text">Sample Input 3</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Output-3"><span class="nav-number"></span> <span class="nav-text">Sample Output 3</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Hint"><span class="nav-number"></span> <span class="nav-text">Hint</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></li></ol></li></div>
             
 
           </div>

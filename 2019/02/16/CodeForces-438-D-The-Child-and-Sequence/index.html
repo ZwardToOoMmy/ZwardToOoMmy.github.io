@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="ZT&#39;s Blog">
 <meta property="og:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题#.The Child and Sequence题面At the children’s day, the child came to Picks’s house, and messed  his house up. Picks was angry at him. A lot of important">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-16T05:57:45.378Z">
+<meta property="og:updated_time" content="2019-02-24T13:27:16.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CodeForces#438 D.The Child and Sequence">
 <meta name="twitter:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题#.The Child and Sequence题面At the children’s day, the child came to Picks’s house, and messed  his house up. Picks was angry at him. A lot of important">
@@ -398,7 +398,7 @@
       
 
       
-        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="The-Child-and-Sequence"><a href="#The-Child-and-Sequence" class="headerlink" title="#.The Child and Sequence"></a>#.The Child and Sequence</h4><h6 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h6><p>At the children’s day, the child came to Picks’s house, and messed  his house up. Picks was angry at him. A lot of important things were  lost, in particular the favorite sequence of Picks.</p>
+        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="The-Child-and-Sequence"><a href="#The-Child-and-Sequence" class="headerlink" title="#.The Child and Sequence"></a>#.The Child and Sequence</h4><h5 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h5><p>At the children’s day, the child came to Picks’s house, and messed  his house up. Picks was angry at him. A lot of important things were  lost, in particular the favorite sequence of Picks.</p>
 <p>Fortunately, Picks remembers how to repair the sequence. Initially he should create an integer array $a[1],a[2],…,a[n]$ . Then he should perform a sequence of $m$ operations. An operation can be one of the following:</p>
 <ol>
 <li>Print operation $l,r$ . Picks should write down the value of $\sum_{i=l}^ra[i]$.</li>
@@ -408,9 +408,9 @@
 <p>Can you help Picks to perform the whole sequence of op</p>
 <p>erations?</p>
 <hr>
-<h6 id="简要翻译"><a href="#简要翻译" class="headerlink" title="简要翻译"></a>简要翻译</h6><p>给定你一个数列，要求支持区间和查询，区间取模，单点修改。</p>
+<h5 id="简要翻译"><a href="#简要翻译" class="headerlink" title="简要翻译"></a>简要翻译</h5><p>给定你一个数列，要求支持区间和查询，区间取模，单点修改。</p>
 <hr>
-<h6 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h6><p>第一行包含两个整数$n,m$。</p>
+<h5 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h5><p>第一行包含两个整数$n,m$。</p>
 <p>第二行包含用空格隔开的$n$个整数，$a[1],a[2],a[3]…a[n]$代表序列的值。</p>
 <p>下面包含$m$行。每行开头包含一个整数$type$表示操作类型。</p>
 <ul>
@@ -419,19 +419,19 @@
 <li>若$type=3$，后面跟着两个整数$k,x$，表示将$a[k]$修改为$x$。</li>
 </ul>
 <hr>
-<h6 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h6><p>对于每个操作$1$，输出一个整数表示答案。</p>
+<h5 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h5><p>对于每个操作$1$，输出一个整数表示答案。</p>
 <p>注意，答案可能会超出$int$。</p>
 <hr>
-<h6 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h6><p>5 5<br>1 2 3 4 5<br>2 3 5 4<br>3 3 5<br>1 2 5<br>2 1 3 3<br>1 1 3</p>
+<h5 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h5><p>5 5<br>1 2 3 4 5<br>2 3 5 4<br>3 3 5<br>1 2 5<br>2 1 3 3<br>1 1 3</p>
 <hr>
-<h6 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h6><p>8</p>
+<h5 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h5><p>8</p>
 <p>5</p>
 <hr>
-<h6 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2"></a>Sample Input 2</h6><p>10 10<br>6 9 6 7 6 1 10 10 9 5<br>1 3 9<br>2 7 10 9<br>2 5 10 8<br>1 4 7<br>3 3 7<br>2 7 9 9<br>1 2 4<br>1 6 6<br>1 5 9<br>3 1 10</p>
+<h5 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2"></a>Sample Input 2</h5><p>10 10<br>6 9 6 7 6 1 10 10 9 5<br>1 3 9<br>2 7 10 9<br>2 5 10 8<br>1 4 7<br>3 3 7<br>2 7 9 9<br>1 2 4<br>1 6 6<br>1 5 9<br>3 1 10</p>
 <hr>
-<h6 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2"></a>Sample Output 2</h6><p>49<br>15<br>23<br>1<br>9</p>
+<h5 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2"></a>Sample Output 2</h5><p>49<br>15<br>23<br>1<br>9</p>
 <hr>
-<h6 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h6><p>$1\le n,m\le 10^5,1\le a[i]\le 10^9$。</p>
+<h5 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h5><p>$1\le n,m\le 10^5,1\le a[i]\le 10^9$。</p>
 <p>$type∈\{1,2,3\}$。</p>
 <p>操作$1$中，$1\le l\le r\le n$。</p>
 <p>操作$2$中，$1\le l\le r\le n,1\le x\le 10^9$。</p>
@@ -706,7 +706,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Child-and-Sequence"><span class="nav-number"></span> <span class="nav-text">#.The Child and Sequence</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#简要翻译"><span class="nav-number">2.</span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Input"><span class="nav-number">3.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Output"><span class="nav-number">4.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input-1"><span class="nav-number">5.</span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output-1"><span class="nav-number">6.</span> <span class="nav-text">Sample Output 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input-2"><span class="nav-number">7.</span> <span class="nav-text">Sample Input 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output-2"><span class="nav-number">8.</span> <span class="nav-text">Sample Output 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Hint"><span class="nav-number">9.</span> <span class="nav-text">Hint</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#样例解释"><span class="nav-number">10.</span> <span class="nav-text">样例解释</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Child-and-Sequence"><span class="nav-number"></span> <span class="nav-text">#.The Child and Sequence</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题面"><span class="nav-number"></span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#简要翻译"><span class="nav-number"></span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Input"><span class="nav-number"></span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Output"><span class="nav-number"></span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Input-1"><span class="nav-number"></span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Output-1"><span class="nav-number"></span> <span class="nav-text">Sample Output 1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Input-2"><span class="nav-number"></span> <span class="nav-text">Sample Input 2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Output-2"><span class="nav-number"></span> <span class="nav-text">Sample Output 2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Hint"><span class="nav-number"></span> <span class="nav-text">Hint</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#样例解释"><span class="nav-number">1.</span> <span class="nav-text">样例解释</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></li></ol></li></div>
             
 
           </div>

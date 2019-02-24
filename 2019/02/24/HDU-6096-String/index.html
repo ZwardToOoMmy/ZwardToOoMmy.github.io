@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="ZT&#39;s Blog">
 <meta property="og:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题#.String题面Bob has a dictionary with $N$ words in it.  Now there is a list of words in which the middle part of the word has continuous letters disappe">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-24T13:20:47.535Z">
+<meta property="og:updated_time" content="2019-02-24T13:23:04.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU 6096 String">
 <meta name="twitter:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题#.String题面Bob has a dictionary with $N$ words in it.  Now there is a list of words in which the middle part of the word has continuous letters disappe">
@@ -398,27 +398,27 @@
       
 
       
-        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="String"><a href="#String" class="headerlink" title="#.String"></a>#.String</h4><h6 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h6><p>Bob has a dictionary with $N$ words in it. </p>
+        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="String"><a href="#String" class="headerlink" title="#.String"></a>#.String</h4><h5 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h5><p>Bob has a dictionary with $N$ words in it. </p>
 <p>Now there is a list of words in which the middle part of the word has continuous letters disappeared. The middle part does not include the first and last character.</p>
-<p>We only know the prefix and suffix of each word, and the number of characters missing is uncertain, it could be $0$. But the prefix and suffix of each word can not overlap.</p>
+<p>We only know the prefix and suffix of each word, and the number of characters missing is uncertain, it could be $0​$. But the prefix and suffix of each word can not overlap.</p>
 <p>For each word in the list, Bob wants to determine which word is in the dictionary by prefix and suffix.</p>
 <p>There are probably many answers. You just have to figure out how many words may be the answer.</p>
 <hr>
-<h6 id="简要翻译"><a href="#简要翻译" class="headerlink" title="简要翻译"></a>简要翻译</h6><p>给定$n$个串，有$m$次询问，每次询问给定串$a,b$，问$n$个串中有多少个能表示为$axb$，其中$x$为任意字符串。</p>
+<h5 id="简要翻译"><a href="#简要翻译" class="headerlink" title="简要翻译"></a>简要翻译</h5><p>给定$n$个串，有$m$次询问，每次询问给定串$a,b$，问$n$个串中有多少个能表示为$axb$，其中$x$为任意字符串。</p>
 <hr>
-<h6 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h6><p>第一行给出一个整数$T$，代表数据的组数。</p>
-<p>每一组数据包含$2$个整数$n$和$q$， 分别代表串的个数和询问个数。</p>
+<h5 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h5><p>第一行给出一个整数$T$，代表数据的组数。</p>
+<p>每一组数据包含$2​$个整数$n​$和$q​$， 分别代表串的个数和询问个数。</p>
 <p>以下$n$行每行包含一个字符串$W_i$。</p>
 <p>以下$q$行每行包含两个串$a_i$串$b_i$。</p>
 <p>保证所有的串都是小写字母。</p>
 <hr>
-<h6 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h6><p>对于每组数据，输出包含$q$行，每行包含一个整数代表答案。</p>
+<h5 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h5><p>对于每组数据，输出包含$q$行，每行包含一个整数代表答案。</p>
 <hr>
-<h6 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h6><p>1<br>4 4<br>aba<br>cde<br>acdefa<br>cdef<br>a a<br>cd ef<br>ac a<br>ce f</p>
+<h5 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h5><p>1<br>4 4<br>aba<br>cde<br>acdefa<br>cdef<br>a a<br>cd ef<br>ac a<br>ce f</p>
 <hr>
-<h6 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h6><p>2<br>1<br>1<br>0</p>
+<h5 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h5><p>2<br>1<br>1<br>0</p>
 <hr>
-<h6 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h6><p>$T\le 5$</p>
+<h5 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h5><p>$T\le 5$</p>
 <p>$0&lt; n,q\le 100,000$</p>
 <p>$\sum S_i+P_i\le 500,000​$</p>
 <p>$\sum W_i\le 500,000$</p>
@@ -679,7 +679,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-number"></span> <span class="nav-text">#.String</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#简要翻译"><span class="nav-number">2.</span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Input"><span class="nav-number">3.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Output"><span class="nav-number">4.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input"><span class="nav-number">5.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output"><span class="nav-number">6.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Hint"><span class="nav-number">7.</span> <span class="nav-text">Hint</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-number"></span> <span class="nav-text">#.String</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题面"><span class="nav-number"></span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#简要翻译"><span class="nav-number"></span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Input"><span class="nav-number"></span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Output"><span class="nav-number"></span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Input"><span class="nav-number"></span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Output"><span class="nav-number"></span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Hint"><span class="nav-number"></span> <span class="nav-text">Hint</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></li></ol></li></div>
             
 
           </div>

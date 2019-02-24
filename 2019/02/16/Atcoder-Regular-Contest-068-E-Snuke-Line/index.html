@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="ZT&#39;s Blog">
 <meta property="og:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题E.Snuke Line题面Snuke has decided to play a game, where the player runs a railway company. There are $M+1$ stations on Snuke Line, numbered $0$ through">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-16T12:56:17.432Z">
+<meta property="og:updated_time" content="2019-02-24T13:24:00.264Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Atcoder Regular Contest#068 E.Snuke Line">
 <meta name="twitter:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题E.Snuke Line题面Snuke has decided to play a game, where the player runs a railway company. There are $M+1$ stations on Snuke Line, numbered $0$ through">
@@ -398,30 +398,29 @@
       
 
       
-        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="E-Snuke-Line"><a href="#E-Snuke-Line" class="headerlink" title="E.Snuke Line"></a>E.Snuke Line</h4><h6 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h6><p>Snuke has decided to play a game, where the player runs a railway company. There are $M+1$ stations on Snuke Line, numbered $0$ through $M$. A train on Snuke Line stops at station $0$ and every $d$-th station thereafter, where $d$ is a predetermined constant for each train. For example, if $d=3$, the train stops at station $0, 3, 6, 9$, and so forth.</p>
+        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="E-Snuke-Line"><a href="#E-Snuke-Line" class="headerlink" title="E.Snuke Line"></a>E.Snuke Line</h4><h5 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h5><p>Snuke has decided to play a game, where the player runs a railway company. There are $M+1$ stations on Snuke Line, numbered $0$ through $M$. A train on Snuke Line stops at station $0$ and every $d$-th station thereafter, where $d$ is a predetermined constant for each train. For example, if $d=3$, the train stops at station $0, 3, 6, 9$, and so forth.</p>
 <p>There are $N​$ kinds of souvenirs sold in areas around Snuke Line. The $i​$-th kind of souvenirs can be purchased when the train stops at one of the following stations: stations $l_i,l_i+1,l_i+2,…r_i​$.</p>
 <p>There are <em>M</em> values of <em>d</em>, the interval between two stops, for trains on Snuke Line: $1, 2, 3, …, M$. For each of these $M$ values, find the number of the kinds of souvenirs that can be purchased if one takes a train with that value of <em>d</em> at station $0$. Here, assume that it is not allowed to change trains.</p>
 <hr>
-<h6 id="简要翻译"><a href="#简要翻译" class="headerlink" title="简要翻译"></a>简要翻译</h6><p>有$m$个点集，第$i$个点集包含$0$至$m$中编号是$i$的倍数的点。</p>
+<h5 id="简要翻译"><a href="#简要翻译" class="headerlink" title="简要翻译"></a>简要翻译</h5><p>有$m$个点集，第$i$个点集包含$0$至$m$中编号是$i$的倍数的点。</p>
 <p>给定$n$个区间，对于每个点集，求出有多少个区间包含点集内的至少一个点。</p>
 <hr>
-<p>或者说是：</p>
-<p>有$n$个区间，现在询问你对于$1\le i\le m$的每个$i$，有多少个区间至少包含一个$i$的倍数？</p>
+<h5 id="或者说是："><a href="#或者说是：" class="headerlink" title="或者说是："></a>或者说是：</h5><p>有$n$个区间，现在询问你对于$1\le i\le m$的每个$i$，有多少个区间至少包含一个$i$的倍数？</p>
 <hr>
-<h6 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h6><p>输入的标准格式如下：</p>
+<h5 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h5><p>输入的标准格式如下：</p>
 <figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">N</span> M</span><br><span class="line"><span class="symbol">l1</span> <span class="symbol">r1</span></span><br><span class="line"><span class="symbol"></span>:</span><br><span class="line"><span class="built_in">lN</span> rN</span><br></pre></td></tr></table></figure>
 <hr>
-<h6 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h6><p>输出答案$M$行。第$i$-th行包含停在$d$站的答案。</p>
+<h5 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h5><p>输出答案$M$行。第$i$-th行包含停在$d$站的答案。</p>
 <hr>
-<h6 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h6><p>3 3<br>1 2<br>2 3<br>3 3</p>
+<h5 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h5><p>3 3<br>1 2<br>2 3<br>3 3</p>
 <hr>
-<h6 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h6><p>3<br>2<br>2</p>
+<h5 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h5><p>3<br>2<br>2</p>
 <hr>
-<h6 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2"></a>Sample Input 2</h6><p>7 9<br>1 7<br>5 9<br>5 7<br>5 9<br>1 1<br>6 8<br>3 4</p>
+<h5 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2"></a>Sample Input 2</h5><p>7 9<br>1 7<br>5 9<br>5 7<br>5 9<br>1 1<br>6 8<br>3 4</p>
 <hr>
-<h6 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2"></a>Sample Output 2</h6><p>7<br>6<br>6<br>5<br>4<br>5<br>5<br>3<br>2</p>
+<h5 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2"></a>Sample Output 2</h5><p>7<br>6<br>6<br>5<br>4<br>5<br>5<br>3<br>2</p>
 <hr>
-<h6 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h6><p>$1\le M\le 10^5$</p>
+<h5 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h5><p>$1\le M\le 10^5$</p>
 <p>$1\le N\le 3×10^5$</p>
 <p>$1\le l_i\le r_i\le M$</p>
 <hr>
@@ -680,7 +679,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#E-Snuke-Line"><span class="nav-number"></span> <span class="nav-text">E.Snuke Line</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#简要翻译"><span class="nav-number">2.</span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Input"><span class="nav-number">3.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Output"><span class="nav-number">4.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input-1"><span class="nav-number">5.</span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output-1"><span class="nav-number">6.</span> <span class="nav-text">Sample Output 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input-2"><span class="nav-number">7.</span> <span class="nav-text">Sample Input 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output-2"><span class="nav-number">8.</span> <span class="nav-text">Sample Output 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Hint"><span class="nav-number">9.</span> <span class="nav-text">Hint</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#E-Snuke-Line"><span class="nav-number"></span> <span class="nav-text">E.Snuke Line</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题面"><span class="nav-number"></span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#简要翻译"><span class="nav-number"></span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#或者说是："><span class="nav-number"></span> <span class="nav-text">或者说是：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Input"><span class="nav-number"></span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Output"><span class="nav-number"></span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Input-1"><span class="nav-number"></span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Output-1"><span class="nav-number"></span> <span class="nav-text">Sample Output 1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Input-2"><span class="nav-number"></span> <span class="nav-text">Sample Input 2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Output-2"><span class="nav-number"></span> <span class="nav-text">Sample Output 2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Hint"><span class="nav-number"></span> <span class="nav-text">Hint</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></li></ol></li></div>
             
 
           </div>

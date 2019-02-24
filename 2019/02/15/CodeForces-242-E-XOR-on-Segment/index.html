@@ -97,7 +97,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cdn.luogu.org/upload/vjudge_pic/CF242E/a6ed6800239445c652bf1618450a09b2fce8b86d.png">
 <meta property="og:image" content="https://cdn.luogu.org/upload/vjudge_pic/CF242E/a0b0fe9e9428287337c0277ea02ca07fcf0a01a7.png">
-<meta property="og:updated_time" content="2019-02-15T10:09:42.155Z">
+<meta property="og:updated_time" content="2019-02-24T13:25:32.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CodeForces#242 E.XOR on Segment">
 <meta name="twitter:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题A.XOR on Segment题面You’ve got an array $a$ , consisting of $n$ integers $a_1$,$a_2$,…,$a_n$. You are allowed to perform two operations on this array:">
@@ -401,7 +401,7 @@
       
 
       
-        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="A-XOR-on-Segment"><a href="#A-XOR-on-Segment" class="headerlink" title="A.XOR on Segment"></a>A.XOR on Segment</h4><h6 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h6><p>You’ve got an array $a$ , consisting of $n$ integers $a_1$,$a_2$,…,$a_n$. You are allowed to perform two operations on this array:</p>
+        <h6 id="→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><a href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←" class="headerlink" title="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~"></a>~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</h6><h3 id="2019寒假集训题"><a href="#2019寒假集训题" class="headerlink" title="2019寒假集训题"></a>2019寒假集训题</h3><h4 id="A-XOR-on-Segment"><a href="#A-XOR-on-Segment" class="headerlink" title="A.XOR on Segment"></a>A.XOR on Segment</h4><h5 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h5><p>You’ve got an array $a$ , consisting of $n$ integers $a_1$,$a_2$,…,$a_n$. You are allowed to perform two operations on this array:</p>
 <ol>
 <li>Calculate the sum of current array elements on the segment $[l,r]$  , that is, count value $a_l+a_{l+1}+…+a_r$ .</li>
 <li>Apply the $xor$ operation with $a$ given number $x$ to each array element on the segment $[l,r]$ , that is, execute <img src="https://cdn.luogu.org/upload/vjudge_pic/CF242E/a6ed6800239445c652bf1618450a09b2fce8b86d.png" alt="img">. This operation changes exactly $r-l+1$ array elements.</li>
@@ -409,13 +409,13 @@
 <p>Expression <img src="https://cdn.luogu.org/upload/vjudge_pic/CF242E/a0b0fe9e9428287337c0277ea02ca07fcf0a01a7.png" alt="img"> means applying bitwise xor operation to numbers $x$ and $y$  . The given operation exists in all modern programming languages, for  example in language $C++$ and Java it is marked as “^”, in Pascal — as  “$xor$”.</p>
 <p>You’ve got a list of m m m  operations of the indicated type. Your task is to perform all given  operations, for each sum query you should print the result you get.</p>
 <hr>
-<h6 id="简要翻译"><a href="#简要翻译" class="headerlink" title="简要翻译"></a>简要翻译</h6><p>给定一个长为$n$($n\leq10^5$)的数组</p>
+<h5 id="简要翻译"><a href="#简要翻译" class="headerlink" title="简要翻译"></a>简要翻译</h5><p>给定一个长为$n$($n\leq10^5$)的数组</p>
 <p>数组里的数不超过$10^6$</p>
 <p>有两种操作：</p>
 <p>1:求$sum[l,r]$;</p>
 <p>2:对$[l,r]$中的所有数和$x$异或</p>
 <hr>
-<h6 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h6><p>第一行包含一个整数$n$，表示数组的长度。</p>
+<h5 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h5><p>第一行包含一个整数$n$，表示数组的长度。</p>
 <p>第二行包含用空格隔开的$n$个整数，$a_1,a_2,a_3,…,a_n$表示数组。</p>
 <p>第三行包含一个整数$m$，表示操作的个数。</p>
 <p>下面包含$m$行，每行包含一个整数$t_i$，表示操作的类型。</p>
@@ -426,22 +426,22 @@
 </li>
 </ul>
 <hr>
-<h6 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h6><p>对于每个操作$1$，输出一行一个整数代表答案。</p>
+<h5 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h5><p>对于每个操作$1$，输出一行一个整数代表答案。</p>
 <h1 id="请不要使用”-lld​-”去读入或输出-long-long​-；"><a href="#请不要使用”-lld​-”去读入或输出-long-long​-；" class="headerlink" title="请不要使用”$\%lld​$”去读入或输出$long\ long​$；"></a>请不要使用”$\%lld​$”去读入或输出$long\ long​$；</h1><h1 id="你最好使用”-cin​-cout​-”或者”-I64d​-”。"><a href="#你最好使用”-cin​-cout​-”或者”-I64d​-”。" class="headerlink" title="你最好使用”$cin​$,$cout​$”或者”$\%I64d​$”。"></a>你最好使用”$cin​$,$cout​$”或者”$\%I64d​$”。</h1><hr>
-<h6 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h6><p>5<br>4 10 3 13 7<br>8<br>1 2 4<br>2 1 3 3<br>1 2 4<br>1 3 3<br>2 2 5 5<br>1 1 5<br>2 1 2 10<br>1 2 3</p>
+<h5 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h5><p>5<br>4 10 3 13 7<br>8<br>1 2 4<br>2 1 3 3<br>1 2 4<br>1 3 3<br>2 2 5 5<br>1 1 5<br>2 1 2 10<br>1 2 3</p>
 <hr>
-<h6 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h6><p>26</p>
+<h5 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h5><p>26</p>
 <p>22</p>
 <p>0</p>
 <p>34</p>
 <p>11</p>
 <hr>
-<h6 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2"></a>Sample Input 2</h6><p>6<br>4 7 4 0 7 3<br>5<br>2 2 3 8<br>1 1 5<br>2 3 5 1<br>2 4 5 6<br>1 2 3</p>
+<h5 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2"></a>Sample Input 2</h5><p>6<br>4 7 4 0 7 3<br>5<br>2 2 3 8<br>1 1 5<br>2 3 5 1<br>2 4 5 6<br>1 2 3</p>
 <hr>
-<h6 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2"></a>Sample Output 2</h6><p>38</p>
+<h5 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2"></a>Sample Output 2</h5><p>38</p>
 <p>28</p>
 <hr>
-<h6 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h6><p>$1\leq n\leq 10^5，0\leq a_i\leq 10^6$。</p>
+<h5 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h5><p>$1\leq n\leq 10^5，0\leq a_i\leq 10^6$。</p>
 <p>$1\leq m\leq 5×10^4$，$t=1\ or\ 2$。</p>
 <p>$1\leq l_i\leq r_i\leq n$，$1\leq x_i\leq 10^6$。</p>
 <hr>
@@ -702,7 +702,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-XOR-on-Segment"><span class="nav-number"></span> <span class="nav-text">A.XOR on Segment</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#简要翻译"><span class="nav-number">2.</span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Input"><span class="nav-number">3.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Output"><span class="nav-number">4.</span> <span class="nav-text">Output</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#请不要使用”-lld​-”去读入或输出-long-long​-；"><span class="nav-number"></span> <span class="nav-text">请不要使用”$\%lld​$”去读入或输出$long\ long​$；</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#你最好使用”-cin​-cout​-”或者”-I64d​-”。"><span class="nav-number"></span> <span class="nav-text">你最好使用”$cin​$,$cout​$”或者”$\%I64d​$”。</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input-1"><span class="nav-number">1.</span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output-1"><span class="nav-number">2.</span> <span class="nav-text">Sample Output 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input-2"><span class="nav-number">3.</span> <span class="nav-text">Sample Input 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output-2"><span class="nav-number">4.</span> <span class="nav-text">Sample Output 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Hint"><span class="nav-number">5.</span> <span class="nav-text">Hint</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-XOR-on-Segment"><span class="nav-number"></span> <span class="nav-text">A.XOR on Segment</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题面"><span class="nav-number"></span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#简要翻译"><span class="nav-number"></span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Input"><span class="nav-number"></span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Output"><span class="nav-number"></span> <span class="nav-text">Output</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#请不要使用”-lld​-”去读入或输出-long-long​-；"><span class="nav-number"></span> <span class="nav-text">请不要使用”$\%lld​$”去读入或输出$long\ long​$；</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#你最好使用”-cin​-cout​-”或者”-I64d​-”。"><span class="nav-number"></span> <span class="nav-text">你最好使用”$cin​$,$cout​$”或者”$\%I64d​$”。</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Input-1"><span class="nav-number"></span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Output-1"><span class="nav-number"></span> <span class="nav-text">Sample Output 1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Input-2"><span class="nav-number"></span> <span class="nav-text">Sample Input 2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sample-Output-2"><span class="nav-number"></span> <span class="nav-text">Sample Output 2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Hint"><span class="nav-number"></span> <span class="nav-text">Hint</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></li></div>
             
 
           </div>
