@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="ZT&#39;s Blog">
 <meta property="og:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题#.String题面Bob has a dictionary with N words in it.  Now there is a list of words in which the middle part of the word has continuous letters disappear">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-24T10:44:15.953Z">
+<meta property="og:updated_time" content="2019-02-24T12:22:03.518Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU 6096 String">
 <meta name="twitter:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~2019寒假集训题#.String题面Bob has a dictionary with N words in it.  Now there is a list of words in which the middle part of the word has continuous letters disappear">
@@ -423,6 +423,12 @@
 <p>$\sum S_i+P_i\le 500,000​$</p>
 <p>$\sum W_i\le 500,000$</p>
 <hr>
+<p>条件等价于前缀为$a$，后缀为$b$，且长度$&gt;=|a|+|b|$的个数。</p>
+<p>在不考虑长度的情况下，将正串和反串分别按字典序编号，一个询问对应了编号的一个区间，用$Trie$树或排序+二分+$hash$求出区间，然后用主席树来求答案。</p>
+<p>然后考虑减掉长度不足的，直接枚举长度就可以确定字符串。</p>
+<p>时间复杂度为$O(slogs)$。</p>
+<hr>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -673,7 +679,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-number"></span> <span class="nav-text">#.String</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#简要翻译"><span class="nav-number">2.</span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Input"><span class="nav-number">3.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Output"><span class="nav-number">4.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input"><span class="nav-number">5.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output"><span class="nav-number">6.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Hint"><span class="nav-number">7.</span> <span class="nav-text">Hint</span></a></li></ol></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#→看不见LaTex格式的Dalao们请刷新本页Thanks♪-･ω･-ﾉ←"><span class="nav-number">1.</span> <span class="nav-text">~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2019寒假集训题"><span class="nav-number"></span> <span class="nav-text">2019寒假集训题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-number"></span> <span class="nav-text">#.String</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#简要翻译"><span class="nav-number">2.</span> <span class="nav-text">简要翻译</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Input"><span class="nav-number">3.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Output"><span class="nav-number">4.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Input"><span class="nav-number">5.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sample-Output"><span class="nav-number">6.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Hint"><span class="nav-number">7.</span> <span class="nav-text">Hint</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></li></div>
             
 
           </div>
@@ -745,7 +751,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共30.7k字</span>
+  <span class="post-count">博客全站共30.8k字</span>
 </div>
         
 
