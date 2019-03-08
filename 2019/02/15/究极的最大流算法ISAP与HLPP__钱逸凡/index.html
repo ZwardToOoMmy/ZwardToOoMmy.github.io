@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Magical Algorithm,">
 
 
 
@@ -88,33 +88,34 @@
 
 
 <meta name="description" content="本文搬运自洛谷大佬钱逸凡的博客 究级的最大流算法：ISAP与HLPP最大流的定义及基础解法这里就不再赘述了 有需要的可以看之前写的劣质文章EK与Dinic求解最大流的方法了 前言最大流算法目前有增广路算法和预流推进算法两种，增广路算法的思想是不断地寻找增广路来增大最大流，而预流推进算法的思想是……后面再讲。 先从最熟悉的增广路算法开始讲。  ISAP(Improved Shortest Augum">
+<meta name="keywords" content="Magical Algorithm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="究极的最大流算法ISAP与HLPPHLPP——钱逸凡">
-<meta property="og:url" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/index.html">
 <meta property="og:site_name" content="ZT&#39;s Blog">
 <meta property="og:description" content="本文搬运自洛谷大佬钱逸凡的博客 究级的最大流算法：ISAP与HLPP最大流的定义及基础解法这里就不再赘述了 有需要的可以看之前写的劣质文章EK与Dinic求解最大流的方法了 前言最大流算法目前有增广路算法和预流推进算法两种，增广路算法的思想是不断地寻找增广路来增大最大流，而预流推进算法的思想是……后面再讲。 先从最熟悉的增广路算法开始讲。  ISAP(Improved Shortest Augum">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33500.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33501.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33504.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33505.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33590.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33594.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33595.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33598.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33599.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33604.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33605.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33606.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33607.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33609.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33611.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33630.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33500.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33501.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33504.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33505.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33590.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33594.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33595.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33598.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33599.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33604.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33605.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33606.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33607.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33609.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33611.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33630.png">
 <meta property="og:updated_time" content="2019-02-15T00:41:37.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="究极的最大流算法ISAP与HLPPHLPP——钱逸凡">
 <meta name="twitter:description" content="本文搬运自洛谷大佬钱逸凡的博客 究级的最大流算法：ISAP与HLPP最大流的定义及基础解法这里就不再赘述了 有需要的可以看之前写的劣质文章EK与Dinic求解最大流的方法了 前言最大流算法目前有增广路算法和预流推进算法两种，增广路算法的思想是不断地寻找增广路来增大最大流，而预流推进算法的思想是……后面再讲。 先从最熟悉的增广路算法开始讲。  ISAP(Improved Shortest Augum">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33500.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33500.png">
 
 
 
@@ -144,7 +145,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/">
 
 
 
@@ -319,7 +320,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZwardToOoMmy">
@@ -358,6 +359,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/更多优秀的算法/" itemprop="url" rel="index">
+                    <span itemprop="name">更多优秀的算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -420,17 +443,17 @@
 <p>接下来是主函数：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ISAP</span><span class="params">()</span></span>&#123;</span><br><span class="line">    maxflow=<span class="number">0</span>;</span><br><span class="line">    bfs();</span><br><span class="line">    <span class="keyword">while</span>(dep[s]&lt;n)dfs(s,inf);</span><br><span class="line">    <span class="keyword">return</span> maxflow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="由于dfs部分（有点）相当抽象，可以结合图示理解。"><a href="#由于dfs部分（有点）相当抽象，可以结合图示理解。" class="headerlink" title="由于dfs部分（有点）相当抽象，可以结合图示理解。"></a>由于dfs部分<del>（有点）</del>相当抽象，可以结合图示理解。</h4><p>以下图为例：（反向边没有画，但是有反向边）</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33500.png" alt="33500"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33500.png" alt="33500"></p>
 <p>先 bfs 分层：（蓝色字体表示层数）</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33501.png" alt="33501"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33501.png" alt="33501"></p>
 <p>按照深度，我们只能走S-&gt;1-&gt;5-&gt;6-&gt;t这条增广路，流量为3</p>
 <p>在dfs过程中，从5传到6时$flow==4$而在6号点的$used==3$，所以此时不会直接返回（见上方的代码），而是把6号点的深度加1，同理s,1,5的也要加1，也就是说，跑了这条增广路后，图变成了：</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33504.png" alt="33504"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33504.png" alt="33504"></p>
 <p>看见了吗？s-&gt;1-&gt;5-&gt;6-&gt;t这条路被封了，但是s-&gt;1-&gt;2-&gt;3-&gt;4-&gt;t这条路却能走了</p>
 <p>按照深度，这次肯定是走s-&gt;1-&gt;2-&gt;3-&gt;4-&gt;t这条路。</p>
 <p>这次的情况和上次不同，由于从2传到3时的flow==3而之后的路径的used都是3，所以2,3,4号点的深度不会改变，而1,s的情况与上次的那些点相同，深度会改变。</p>
 <p>跑了这条路之后，图变成了：</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33505.png" alt="33505"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33505.png" alt="33505"></p>
 <p>图中出现了断层（深度为4的点没有了），所以一定不存在增广路了，可以直接结束算法了。</p>
 <h3 id="刚才那张图如果用Dinic会怎么样？"><a href="#刚才那张图如果用Dinic会怎么样？" class="headerlink" title="刚才那张图如果用Dinic会怎么样？"></a>刚才那张图如果用Dinic会怎么样？</h3><h4 id="三遍bfs，两遍dfs！"><a href="#三遍bfs，两遍dfs！" class="headerlink" title="三遍bfs，两遍dfs！"></a>三遍bfs，两遍dfs！</h4><h4 id="与之相比，ISAP真是太高效了！"><a href="#与之相比，ISAP真是太高效了！" class="headerlink" title="与之相比，ISAP真是太高效了！"></a>与之相比，ISAP真是太高效了！</h4><p>这里顺便说一下为什么终止条件是dep[s]&lt;n</p>
 <p>从上面的过程可以看出：每走一遍增广路，s的层数就会加1，如果一直没有出现断层，最多跑n-dep（刚bfs完时s的深度）条增广路（因为一共就n个点）</p>
@@ -468,31 +491,31 @@
 </ul>
 <hr>
 <h3 id="先用图解来表示算法的运行过程："><a href="#先用图解来表示算法的运行过程：" class="headerlink" title="先用图解来表示算法的运行过程："></a>先用图解来表示算法的运行过程：</h3><p>以下图为例（反向边没画出来）</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33590.png" alt="33590"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33590.png" alt="33590"></p>
 <p>我们用深蓝色的字表示每个点的余流，用淡蓝色的字表示每个点的高度。</p>
 <p>刚开始肯定是：</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33594.png" alt="33594"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33594.png" alt="33594"></p>
 <p>我们把s点的高度改成6（一共6个点）</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33595.png" alt="33595"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33595.png" alt="33595"></p>
 <p>然后从往s拼命地灌水，水流会顺着还没满的边向周围的节点流</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33598.png" alt="33598"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33598.png" alt="33598"></p>
 <p>此时1,3节点还有余流，于是更新1,3号点高度，更新为与它相邻且最低的点的高度+1。</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33599.png" alt="33599"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33599.png" alt="33599"></p>
 <p>此时我们对1号节点推流。</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33604.png" alt="33604"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33604.png" alt="33604"></p>
 <p>更新有余流的1,2号节点的高度</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33605.png" alt="33605"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33605.png" alt="33605"></p>
 <p>为什么1的高度变成了7呢？因为1与s有反向边，因为刚才推过流，反向边有了边权，与1连通的最低的点就是s。</p>
 <p>然后是对3节点推流（更新高度是同时进行的只是刚才为了便于理解而分开画了）</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33606.png" alt="33606"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33606.png" alt="33606"></p>
 <p>然后是2号点推流，注意t点不能更新高度（否则好不容易流过去的水就会往回流了）</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33607.png" alt="33607"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33607.png" alt="33607"></p>
 <p>4号点推流</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33609.png" alt="33609"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33609.png" alt="33609"></p>
 <p>2号点推流</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33611.png" alt="33611"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33611.png" alt="33611"></p>
 <p>3号点推流</p>
-<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33630.png" alt="33630"></p>
+<p><img src="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/33630.png" alt="33630"></p>
 <p>除了s和t以外，所有节点都无余流，算法结束，最大流就是t的余流。</p>
 <p>完整代码:</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// luogu-judger-enable-o2</span></span><br><span class="line"><span class="comment">//效率相当低，吸氧气都过不了模板</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf=<span class="number">1</span>&lt;&lt;<span class="number">30</span>;;</span><br><span class="line"><span class="keyword">int</span> n,m,s,t;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> v;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="keyword">int</span> next;</span><br><span class="line">&#125;node[<span class="number">205202</span>];</span><br><span class="line"><span class="keyword">int</span> top=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> inque[<span class="number">13000</span>];</span><br><span class="line"><span class="keyword">int</span> head[<span class="number">13000</span>];</span><br><span class="line"><span class="keyword">int</span> h[<span class="number">13000</span>];</span><br><span class="line"><span class="keyword">int</span> e[<span class="number">13000</span>];<span class="comment">//每个点的高度，每个点的剩余（多余）流量</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Read</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> c=getchar();</span><br><span class="line">    <span class="keyword">while</span>(c&gt;<span class="string">'9'</span>||c&lt;<span class="string">'0'</span>)c=getchar();</span><br><span class="line">    <span class="keyword">while</span>(c&gt;=<span class="string">'0'</span>&amp;&amp;c&lt;=<span class="string">'9'</span>)x=x*<span class="number">10</span>+c-<span class="string">'0'</span>,c=getchar();</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;<span class="comment">//读入优化 </span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">min</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a&lt;b?a:b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">addedge</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> val)</span></span>&#123;</span><br><span class="line">    node[++top].v=v;</span><br><span class="line">    node[top].val=val;</span><br><span class="line">    node[top].next=head[u];</span><br><span class="line">    head[u]=top;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> val)</span></span>&#123;</span><br><span class="line">    addedge(u,v,val);</span><br><span class="line">    addedge(v,u,<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> maxflow;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">push_</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> mi=min(e[u],node[i].val);</span><br><span class="line">    node[i].val-=mi;</span><br><span class="line">    node[i^<span class="number">1</span>].val+=mi;</span><br><span class="line">    e[u]-=mi;</span><br><span class="line">    e[node[i].v]+=mi;</span><br><span class="line">&#125;<span class="comment">//从u到v推流,i为u与v相连的那一条边的编号 </span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">relabel</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> mh=inf;</span><br><span class="line">    <span class="keyword">register</span> <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=head[u];i;i=node[i].next)&#123;</span><br><span class="line">        <span class="keyword">int</span> d=node[i].v;</span><br><span class="line">        <span class="keyword">if</span>(node[i].val)&#123;</span><br><span class="line">            mh=min(mh,h[d]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(mh==inf)<span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//无可以流的路径</span></span><br><span class="line">    h[u]=mh+<span class="number">1</span>;<span class="comment">//把u点拉到可流点以上（使水流能从u流向周围的点）</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>; </span><br><span class="line">&#125;<span class="comment">//判断点u是否能流向周围点</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">push_relabel</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;q;</span><br><span class="line">    h[s]=n;<span class="comment">//把源点的高度设成n（图中的点数） </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=head[s];i;i=node[i].next)&#123;</span><br><span class="line">        <span class="keyword">int</span> d=node[i].v;</span><br><span class="line">        <span class="keyword">int</span> val=node[i].val;</span><br><span class="line">        <span class="keyword">if</span>(val)&#123;</span><br><span class="line">            node[i].val-=val;</span><br><span class="line">            node[i^<span class="number">1</span>].val+=val;</span><br><span class="line">            e[s]-=val;</span><br><span class="line">            e[d]+=val;</span><br><span class="line">            <span class="keyword">if</span>(inque[d]==<span class="number">0</span>&amp;&amp;d!=t&amp;&amp;d!=s&amp;&amp;relabel(d))&#123;</span><br><span class="line">                q.push(d);</span><br><span class="line">                inque[d]=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="comment">//给所有与s相连的点推入满流 </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!q.empty())&#123;</span><br><span class="line">        <span class="keyword">int</span> u=q.front();</span><br><span class="line">        q.pop();</span><br><span class="line">        inque[u]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=head[u];i;i=node[i].next)&#123;</span><br><span class="line">            <span class="keyword">int</span> d=node[i].v;</span><br><span class="line">            <span class="keyword">if</span>(e[u]==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">if</span>(node[i].val==<span class="number">0</span>)<span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span>(h[u]==h[d]+<span class="number">1</span>) push_(u,i);</span><br><span class="line">            <span class="keyword">if</span>(e[d]!=<span class="number">0</span>&amp;&amp;d!=t&amp;&amp;d!=s)&#123;</span><br><span class="line">                <span class="keyword">if</span>(inque[d]==<span class="number">0</span>&amp;&amp;relabel(d))&#123;</span><br><span class="line">                    q.push(d);</span><br><span class="line">                    inque[d]=<span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(e[u]&amp;&amp;inque[u]==<span class="number">0</span>&amp;&amp;relabel(u))&#123;</span><br><span class="line">            q.push(u);</span><br><span class="line">            inque[u]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> e[t];</span><br><span class="line">&#125;<span class="comment">//push_relabel</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    n=Read(),m=Read(),s=Read(),t=Read();</span><br><span class="line">    <span class="keyword">register</span> <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> u,v,val;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=m;i++)u=Read(),v=Read(),val=Read(),add(u,v,val);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,push_relabel());</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -544,6 +567,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Magical-Algorithm/" rel="tag"># Magical Algorithm</a>
+          
+        </div>
+      
 
       
       
@@ -553,8 +582,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/15/究极的最大流算法ISAP与HLPP__钱逸凡/" rel="next" title="究极的最大流算法ISAP与HLPPHLPP——钱逸凡">
-                <i class="fa fa-chevron-left"></i> 究极的最大流算法ISAP与HLPPHLPP——钱逸凡
+              <a href="/2019/02/14/Atcoder-Grand-Contest-016-F-Games-on-DAG/" rel="next" title="Atcoder Grand Contest#016 F.Games on DAG">
+                <i class="fa fa-chevron-left"></i> Atcoder Grand Contest#016 F.Games on DAG
               </a>
             
           </div>
@@ -563,8 +592,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/15/CodeForces-242-E-XOR-on-Segment/" rel="prev" title="CodeForces#242 E.XOR on Segment">
-                CodeForces#242 E.XOR on Segment <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/15/究极的最大流算法ISAP与HLPPHLPP__钱逸凡/" rel="prev" title="究极的最大流算法ISAP与HLPPHLPP——钱逸凡">
+                究极的最大流算法ISAP与HLPPHLPP——钱逸凡 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
