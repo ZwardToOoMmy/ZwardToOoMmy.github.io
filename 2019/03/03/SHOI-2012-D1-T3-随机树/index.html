@@ -96,7 +96,7 @@
 <meta property="og:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~[SHOI2012] 随机树题面  Input输入仅有一行，包含两个正整数 $q, n​$，分别表示问题编号以及叶结点的个数。  Output输出仅有一行，包含一个实数 $d​$，四舍五入精确到小数点后 $6​$ 位。如果 $q = 1​$，则 $d​$ 表示叶结点平均深度的数学期望值；如果 $q = 2​$，则 $">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/03/SHOI-2012-D1-T3-随机树/1.png">
-<meta property="og:updated_time" content="2019-03-11T12:12:27.273Z">
+<meta property="og:updated_time" content="2019-03-13T12:54:18.601Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SHOI 2012 D1-T3 随机树">
 <meta name="twitter:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~[SHOI2012] 随机树题面  Input输入仅有一行，包含两个正整数 $q, n​$，分别表示问题编号以及叶结点的个数。  Output输出仅有一行，包含一个实数 $d​$，四舍五入精确到小数点后 $6​$ 位。如果 $q = 1​$，则 $d​$ 表示叶结点平均深度的数学期望值；如果 $q = 2​$，则 $">
@@ -450,14 +450,16 @@
 <h5 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h5><p><code>#1,2:</code>$q=1,2\le n\le 10$</p>
 <p><code>#3,4,5:</code>$q=1,2\le n\le 100$</p>
 <p><code>#6,7:</code>$q=2,2\le n\le 10$</p>
-<p><code>#8,9,10:</code>$q=2,2\le n\le 100$</p>
+<p><code>#8,9,10:</code>$q=2,2\le n\le 100​$</p>
 <hr>
 <p><strong>对于第1问：</strong></p>
-<p>要求平均叶子节点的深度的期望，用dp写。</p>
-<p>有个很显然的dp方程，设$f[i]$代表$i$个节点时树的平均深度，那么肯定有$f[i]=f[i-1]+\frac 2i​$。</p>
-<p>怎么说呢，比较显然的规律：</p>
-<p>假设我们当前已经生成了$i-1​$的节点，因为这是一棵二叉树，所以我们第$i​$个节点只有$i​$个地方可以生成<del>（不信的话你们可以自己xjb画一棵树试试）</del>。我们只有在深度最深的那个节点处加左/右儿子的话才能够使$i​$个节点的树平均深度增加，即我们有$\frac 2i​$的概率能使$i-1​$个节点的树$+1​$深度，就能得到上一方程。</p>
-<p>初始状态$f[1]$=0。</p>
+<p>要求平均叶子节点的深度的期望，用$dp$写。</p>
+<p>有个很显然的$dp$方程，设$f[i]$代表有$i$个叶子节点时树的平均深度，那么肯定有$f[i]=f[i-1]+\frac 2i$。</p>
+<p><del>怎么说呢，比较显然的规律：</del></p>
+<p><del>假设我们当前已经生成了$i-1​$的节点，因为这是一棵二叉树，所以我们第$i​$个节点只有$i​$个地方可以生成（不信的话你们可以自己xjb画一棵树试试）。我们只有在深度最深的那个节点处加左/右儿子的话才能够使$i​$个节点的树平均深度增加，即我们有$\frac 2i​$的概率能使$i-1​$个节点的树$+1​$深度，就能得到上一方程。</del></p>
+<p><strong>（好像有点问题，下面好像比较对，2019.3.13留）</strong></p>
+<p>由于我们要求平均值，若我们当前要加入节点$i​$，原$i-1​$个叶子节点深度和为$f[i-1]×(i-1)​$，我们可以将加入点之前所有点的平均深度之前看成是该点父节点的深度（本题的精髓），即我们新加入的点$i​$的父亲$x​$深度为$f[i-1]​$，$i​$的深度是$f[i-1]+1​$；我们知道要使一棵树的叶子节点数$+1​$，那么我们必须使原叶子节点$x​$同时有左右儿子，并且我们此时的$x​$节点已经不是父节点了，所以有$dp​$方程：</p>
+<script type="math/tex; mode=display">f[i]=\frac {f[i-1]×(i-1)+(f[i-1]+1)×2-f[i-1]}{i}=\frac {f[i-1]*i+2}{i}=f[i-1]+\frac 2i​</script><p>初始状态$f[1]​$=0。</p>
 <p>答案为$ans=f[n]​$。</p>
 <p><strong>对于第2问：</strong></p>
 <p>在做这一问前，我们先来看个公式：</p>
@@ -795,7 +797,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.1k字</span>
+  <span class="post-count">博客全站共36.3k字</span>
 </div>
         
 
