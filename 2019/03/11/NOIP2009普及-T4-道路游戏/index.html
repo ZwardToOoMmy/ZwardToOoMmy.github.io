@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="日常-DP,">
+  <meta name="keywords" content="Daily-Dynamic Programming,">
 
 
 
@@ -88,7 +88,7 @@
 
 
 <meta name="description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~[NOIP2009普及]T4 道路游戏题面小新正在玩一个简单的电脑游戏。 游戏中有一条环形马路，马路上有 $n$ 个机器人工厂，两个相邻机器人工厂之间由一小段马路连接。小新以某个机器人工厂为起点，按顺时针顺序依次将这 $n$ 个机器人工厂编号为$1−n$，因为马路是环形的，所以第$n$个机器人工厂和第$1$个机器人工">
-<meta name="keywords" content="日常-DP">
+<meta name="keywords" content="Daily-Dynamic Programming">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NOIP2009普及 T4 道路游戏">
 <meta property="og:url" content="http://yoursite.com/2019/03/11/NOIP2009普及-T4-道路游戏/index.html">
@@ -96,7 +96,7 @@
 <meta property="og:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~[NOIP2009普及]T4 道路游戏题面小新正在玩一个简单的电脑游戏。 游戏中有一条环形马路，马路上有 $n$ 个机器人工厂，两个相邻机器人工厂之间由一小段马路连接。小新以某个机器人工厂为起点，按顺时针顺序依次将这 $n$ 个机器人工厂编号为$1−n$，因为马路是环形的，所以第$n$个机器人工厂和第$1$个机器人工">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/11/NOIP2009普及-T4-道路游戏/1.jpg">
-<meta property="og:updated_time" content="2019-03-11T13:35:29.413Z">
+<meta property="og:updated_time" content="2019-03-17T13:35:46.894Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOIP2009普及 T4 道路游戏">
 <meta name="twitter:description" content="~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~[NOIP2009普及]T4 道路游戏题面小新正在玩一个简单的电脑游戏。 游戏中有一条环形马路，马路上有 $n$ 个机器人工厂，两个相邻机器人工厂之间由一小段马路连接。小新以某个机器人工厂为起点，按顺时针顺序依次将这 $n$ 个机器人工厂编号为$1−n$，因为马路是环形的，所以第$n$个机器人工厂和第$1$个机器人工">
@@ -444,7 +444,7 @@
 <p>emmm，$i,j$固定，只在枚举$k$时，好像$sum[i][j]$不会改变，先拿出来再说。</p>
 <script type="math/tex; mode=display">f_i=Max(f_{i-k}-sum_{i-k,j-k}-cost_{j-k})+sum_{i,j}</script><p><strong>我们其实可以发现：</strong></p>
 <p>$f_{i-k}-sum_{i-k,j-k}-cost_{j-k}$中，我们各项随着$k$的改变而变动，那么由于所有的下标都同时减$k$其实就是在二维前缀$sum$的对角线上取$f_{i-k}-sum_{i-k,j-k}-cost_{j-k}$整体的最大值。</p>
-<p><strong>ok，那么直接用堆来维护这一坨的最大值吧！好像这样复杂度就降为了</strong>$O(n^2logn)$<strong>，足以过这题了</strong>。</p>
+<p><strong>ok，那么直接用堆来维护这一坨的最大值吧！好像这样复杂度就降为了</strong>$O(n^2logn)​$<strong>，足以过这题了</strong>。</p>
 <hr>
 <h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -473,7 +473,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/日常-DP/" rel="tag"># 日常-DP</a>
+            <a href="/tags/Daily-Dynamic-Programming/" rel="tag"># Daily-Dynamic Programming</a>
           
         </div>
       
@@ -604,7 +604,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
