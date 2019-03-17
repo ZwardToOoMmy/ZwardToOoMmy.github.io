@@ -17,11 +17,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[想看的电影噫~]]></title>
-    <url>%2F2019%2F03%2F17%2F%E6%83%B3%E7%9C%8B%E7%9A%84%E7%94%B5%E5%BD%B1%E5%99%AB-1%2F</url>
-    <content type="text"><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[2019.3.17周末省选模拟爆零赛]]></title>
     <url>%2F2019%2F03%2F17%2F2019-3-17%E5%91%A8%E6%9C%AB%E7%9C%81%E9%80%89%E6%A8%A1%E6%8B%9F%E7%88%86%E9%9B%B6%E8%B5%9B%2F</url>
     <content type="text"><![CDATA[~{→看不见LaTex格式的Dalao们请刷新本页Thanks♪(･ω･)ﾉ←}~3.17周末训练 Code~ Wolf ~12345678910111213141516171819202122232425262728293031323334353637#include&lt;bits/stdc++.h&gt;using namespace std;int read()&#123; int x=0,w=0; char ch=0; while(!isdigit(ch))&#123;w|=ch=='-';ch=getchar();&#125; while(isdigit(ch))&#123;x=(x&lt;&lt;3)+(x&lt;&lt;1)+ch-'0';ch=getchar();&#125; return w? -x:x;&#125;int n,attack;struct wolf_data&#123; int atk,bonus,hp;&#125;w[410];int times[410];int f[910][910];int main(int argc, char const *argv[])&#123; freopen("wolf.in","r",stdin); freopen("wolf.out","w",stdout); n=read(),attack=read(); for(int i=1;i&lt;=n;++i) w[i].atk=read(),w[i].bonus=read(),w[i].hp=read(),times[i]=(w[i].hp/attack)+(w[i].hp%attack!=0); memset(f,0x3f,sizeof(f)); for(int i=1;i&lt;=n;++i) f[i][i]=times[i]*(w[i].atk+w[i-1].bonus+w[i+1].bonus); for(int i=1;i&lt;=n+10;++i) f[i][i-1]=0; for(int i=2;i&lt;=n;++i) for(int len=1;len&lt;=n-i+1;++len) &#123; int j=i+len-1; for(int k=len;k&lt;=j;++k) f[len][j]=min(f[len][j],f[len][k-1]+f[k+1][j]+(w[k].atk+w[len-1].bonus+w[j+1].bonus)*times[k]); &#125; cout&lt;&lt;f[1][n]&lt;&lt;endl; return 0;&#125; ~ Sum ~12 ~ RSMT ~（提交答案）12]]></content>
